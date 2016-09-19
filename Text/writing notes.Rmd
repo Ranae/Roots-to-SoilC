@@ -10,18 +10,20 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Checklist for giving to coauthors  
- Revise to emphasize C:N ratios, not quality  
- Fix corn root curve  
-   Add error bars to root C  
- Address Castellano's comments  
- Make soil characteristics table  
- Improve figures for smaller size  
+- [x] Revise to emphasize C:N ratios, not quality  
+- [] Fix corn root curve  
+- []   Add error bars to root C  
+- [] Address Castellano's comments  
+- [] Make soil characteristics table  
+- [] Improve figures for smaller size  
  Root pool mass figure  
-   Fix facet labels  
-   Enlarge legend  
-   Enlarge axes labels  
-   Change color scheme  
- Incorporate literature  
+- [x]   Fix facet labels  
+- [x]   Enlarge legend  
+- [x]   Enlarge axes labels  
+- [x]   Change color scheme  
+- [] Incorporate literature  
+
+- [] Write conclusion
  
  
  
