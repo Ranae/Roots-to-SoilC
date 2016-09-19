@@ -1,0 +1,28 @@
+---
+title: "RootsandSoilC Notes"
+author: "Ranae Dietzel"
+date: "September 13, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Checklist for giving to coauthors  
+ Revise to emphasize C:N ratios, not quality  
+ Fix corn root curve  
+   Add error bars to root C  
+ Address Castellano's comments  
+ Make soil characteristics table  
+ Improve figures for smaller size  
+ Root pool mass figure  
+   Fix facet labels  
+   Enlarge legend  
+   Enlarge axes labels  
+   Change color scheme  
+ Incorporate literature  
+ 
+ 
+ 
+ 

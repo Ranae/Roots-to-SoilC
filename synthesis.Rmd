@@ -1,0 +1,108 @@
+---
+title: "Development of the soil organic carbon profile in prairie soils"
+author: "Ranae Dietzel"
+date: "August 31, 2015"
+output: 
+  html_document: 
+    keep_md: yes
+    theme: flatly
+    toc: yes
+---
+
+## Introduction
+In 1935, Weaver and colleagues first observed that while the upper 15 cm of a tallgrass prairie soil profile contained seventy percent of the profile’s root and rhizome biomass, it only contained forty percent of the profile’s soil carbon (C).  Roughly 100 years after continued cultivation of the prairie soils in the Midwestern US, this distribution of SOC persists (CITE).  Much of the loss of SOC near the soil surface and the retention of SOC at depth can be attributed to a gradient of soil temperature and moisture that creates more favorable conditions for decomposition near the soil surface.  However, these factors are not always able to account for differences in C input vs. C retention (CITE).  In this paper, we study the development of a restored prairie root C pool and a maize root C pool to examine how root inputs, depth, and the interaction of the two contribute to the vertical distribution of SOC.   
+
+##Soil environment
+Here is the proportion of soil C (brown line) and root C (green line) found over the soil profile.
+
+```{r soilCPlot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=10}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+propfig<-read.csv("Data/Roots and Soil C.csv", header=TRUE)
+
+roots<-propfig%>%
+  gather(key = variable, value = value, soilCprop:CN)
+  
+roots$depth<-as.numeric(roots$depth)
+
+ggplot() +
+   geom_line(aes(x=depth, y=value), size=2, 
+            data=filter(roots, variable=="rootCprop"), color="green")+
+   geom_line(aes(x=depth, y=value), size=2, 
+             data=filter(roots, variable=="soilCprop"), color="brown")+
+   ylab("Proportion")+
+   xlab("Depth (cm)")+
+   facet_wrap(~trt)+
+   coord_flip()+
+   scale_x_reverse()+
+   ggtitle("Proportion of the top 1 m which contains soil or root C")
+
+```
+
+Here are average temperatures and moistures over the profile. Soil moisture in the winter is removed from analysis.
+```{r soil temp plot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=12}
+cc<-read.csv("Data/cc soil climate.csv", header=TRUE)
+cc$trt<-"cc"
+pf<-read.csv("Data/pf soil climate.csv", header=TRUE)
+pf$trt<-"pf"
+p<-read.csv("Data/p soil climate.csv", header=TRUE)
+p$trt<-"p"
+
+all<-rbind(cc, pf, p)
+
+
+allmeans<-all%>%
+  select(-(ec1:ec5))%>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y"))%>%
+  group_by(date, trt)%>%
+  summarise_each(funs(mean, "mean", mean(., na.rm = TRUE)))%>%
+  gather(key = variable, value = mean, sw1_mean:st5_mean)%>%
+  select(-block_mean)%>%
+  mutate(type = c("water", "temp") [grepl("sw", variable)+2*grepl("st", variable)])%>%
+  mutate(depth = c("5", "10", "17.5", "35", "50") 
+         [grepl("1", variable)+2*grepl(2, variable)+3*grepl(3, variable)+4*grepl(4, variable)+5*grepl(5, variable)])%>%
+  mutate(month=month(date))
+
+allmeans<-allmeans[!(allmeans$type == "water" & allmeans$month %in% c("1", "2", "3", "12")),]
+
+  allmeans<-group_by(allmeans, trt, type, depth)%>%
+  summarise_each(funs(mean, "mean", mean(., na.rm = TRUE)))
+
+
+allmeans$depth<-as.numeric(allmeans$depth)
+
+
+ggplot() +
+  geom_line(aes(x=depth, y=mean_mean, group=trt, colour=trt), size=2, 
+             data=filter(allmeans, type=="temp"))+
+  ylab("Degrees C")+
+  xlab("Depth (cm)")+
+  coord_flip()+
+  scale_x_reverse()+
+  ggtitle("Average yearly soil temperature over the soil profile")
+```
+
+```{r soil water plot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=12}
+ggplot() +
+  geom_line(aes(x=depth, y=mean_mean, group=trt, colour=trt), size=2, 
+            data=filter(allmeans, type=="water"))+
+  ylab("Soil water content (mm/mm)")+
+  xlab("Depth (cm)")+
+  coord_flip()+
+  scale_x_reverse()+
+  ggtitle("Average soil moisture over the soil profile")
+```
+
+
+```{r, include=FALSE}
+
+file.rename(from="synthesis.md", to="README.md")
+
+filesNames <- paste0("synthesis_files/figure-html/",list.files("synthesis_files/figure-html"))
+
+file.copy(from=filesNames, to="synthesis_files/figure-html",
+          recursive = FALSE, copy.mode = TRUE)
+
+```
