@@ -16,7 +16,7 @@ We examined the belowground reconstruction of native vegetation on a Mollisol af
 
 ##Preliminary Results
 
-![Figure 1](/Figures/Roots and Soil 2013.pdf?raw=true "Fig 1")
+![Figure 1](/Figures/Roots and Soil 2013 Profile.pdf?raw=true)
 Figure 1. From left to right: total soil carbon, maize root carbon, fertilized prairie root carbon, unfertilized prairie root carbon at the end of the study (2013). Different x-axes scales are used to emphasize similarities and differences in distribution patterns, not absolute mass amounts. 
 
 Figure 2. Absolute difference in root C pools six years after prairie establishment.  
