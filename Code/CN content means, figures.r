@@ -70,8 +70,9 @@ e<-ggplot(data = cnsum2,aes(x = point,y = CN)) +
           #panel.background = element_blank(),
           axis.line = element_line(),
           legend.position=c(.80,.93), legend.title=element_blank(),
-		  legend.text = element_text(size=12),
-		  axis.title.x = element_text(size=14,vjust=-0.5),
+		      legend.text = element_text(size=12),legend.key.size=unit(1, "cm"),
+		      strip.text =element_text(size=22),
+		      axis.title.x = element_text(size=14,vjust=-0.5),
           axis.title.y = element_text(size=14,angle=90),
           axis.text.x = element_text(colour="black", size=16),
           axis.text.y = element_text(colour="black", size=16)) 
