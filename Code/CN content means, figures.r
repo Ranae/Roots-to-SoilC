@@ -50,6 +50,21 @@ cnsum2 <- cnsum[cnsum$trt %in% c("P", "PF", "CC"),]
 
 dodge <- position_dodge(width=.9)
 
+this_theme<-theme_bw()+
+  theme(#panel.grid.major = element_blank(),
+    #panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    axis.line = element_line(),
+    legend.position='none', legend.title=element_blank(),
+    legend.text = element_text(size=12),
+    axis.title.x = element_text(size=22,vjust=-0.5),
+    axis.title.y = element_text(size=22,angle=90, vjust=1.2),
+    axis.text.x = element_text(colour="black", size=18),
+    axis.text.y = element_text(colour="black", size=18), 
+    strip.text = element_text(colour="black", size=18))
+
+theme_set(this_theme)
+
 ##CN ratios over years, each depth, barplot
 ggplot(cnsum, aes(x=factor(year), y = CN, fill=trt)) + 
     geom_bar(stat = "identity", position = "dodge") +
@@ -61,7 +76,7 @@ theme_set(theme_bw())
 ##CN ratios over depths (profile), each year
 e<-ggplot(data = cnsum2,aes(x = point,y = CN)) + 
     geom_ribbon(aes(group = trt,ymin = CN - CNse,ymax = CN + CNse),alpha = 0.25) + 
-    geom_line(aes(group = trt,linetype = trt,colour = trt),size = 1) + 
+    geom_line(aes(group = trt,linetype = trt,colour = trt),size = 1.5) + 
 	coord_flip() +
 	facet_wrap(~ year, ncol = 1)+
 	labs(x = "Depth (cm)",y = "C:N Ratio") + 
@@ -70,12 +85,12 @@ e<-ggplot(data = cnsum2,aes(x = point,y = CN)) +
           #panel.background = element_blank(),
           axis.line = element_line(),
           legend.position=c(.80,.93), legend.title=element_blank(),
-		      legend.text = element_text(size=12),legend.key.size=unit(1, "cm"),
+		      legend.text = element_text(size=20),legend.key.size=unit(1, "cm"),
 		      strip.text =element_text(size=22),
-		      axis.title.x = element_text(size=14,vjust=-0.5),
-          axis.title.y = element_text(size=14,angle=90),
-          axis.text.x = element_text(colour="black", size=16),
-          axis.text.y = element_text(colour="black", size=16)) 
+		      axis.title.x = element_text(size=22,vjust=-0.5),
+          axis.title.y = element_text(size=22,angle=90),
+          axis.text.x = element_text(colour="black", size=20),
+          axis.text.y = element_text(colour="black", size=20)) 
 
 ##CN ratios over years, each depth, line	
 d<-ggplot(data = cnsum2,aes(x = year,y = CN)) + 

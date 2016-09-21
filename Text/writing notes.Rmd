@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Checklist for giving to coauthors  
 - [x] Revise to emphasize C:N ratios, not quality  
-- [] Fix corn root curve  
+- [] Fix corn root curve and prairie negative root value  
 - []   Add error bars to root C  
 - [] Address Castellano's comments  
 - [] Make soil characteristics table  
@@ -21,9 +21,29 @@ knitr::opts_chunk$set(echo = TRUE)
 - [x]   Enlarge legend  
 - [x]   Enlarge axes labels  
 - [x]   Change color scheme  
+- [] Increase font sizes in Figure 2
 - [] Incorporate literature  
 
-- [] Write conclusion
+- [x] Write conclusion
+- [] Materials and Methods
+- []   Table 1  
+- [] Fix all the tables, really
+- [] Those appendix figures  
+- [] Maize planting dates  
+- [] 
+     
+     
+
+Need citations for: 
+
+Soil organic matter losses
+Roles of increases aeration
+         Addition of fertilizer
+         Changes in residue amount and quality  
+Slower increases at deeper depths than shallower depths may be indicative that accumulation there is more dependent upon the carryover of roots from previous years than at shallower depths.  
+
+
+
  
  
  
