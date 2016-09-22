@@ -30,6 +30,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - [] Fix all the tables, really
 - [] Those appendix figures  
 - [] Maize planting dates  
+- [] Change g/m2/day to Mg/year  
 - [] 
      
      

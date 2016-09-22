@@ -78,8 +78,11 @@ ratemeans5<-ratemeans[ratemeans$depth == 5,]
 
 
 ratemeans2<-ratemeans[ratemeans$trt %in% c("P", "PF", "CC"),]
-ratemeans2$g.m2.day<-ratemeans2$Mg.ha.day*100
-ratemeans2$g.m2.day.se<-ratemeans2$Mg.ha.day.se*100
+#ratemeans2$g.m2.day<-ratemeans2$Mg.ha.day*100
+#ratemeans2$g.m2.day.se<-ratemeans2$Mg.ha.day.se*100
+
+ratemeans2$Mg.ha.year<-ratemeans2$Mg.ha.day*365
+ratemeans2$Mg.ha.year.se<-ratemeans2$Mg.ha.day.se*365
 
 			 
 b5<-ggplot(data = filter(ratemeans2, depth == 5),aes(x = day,y = g.m2.day)) + 
@@ -410,8 +413,10 @@ ratescc<-ggplot(data = filter(ratemeans2, trt=="CC"),aes(x = day,y = g.m2.day)) 
         axis.text.x = element_blank(),
         axis.text.y = element_text(colour="black", size=22))
 
-ratesp<-ggplot(data = filter(ratemeans2, trt=="P"),aes(x = day,y = g.m2.day)) + 
-  geom_ribbon(aes(group = depth,ymin = g.m2.day - g.m2.day.se,ymax = g.m2.day + g.m2.day.se),alpha = 0.25) + 
+ratesp<-ggplot(data = filter(ratemeans2, trt=="P"),aes(x = day,y = Mg.ha.year)) + 
+  #geom_ribbon(aes(group = depth,ymin = g.m2.day - g.m2.day.se,ymax = g.m2.day + g.m2.day.se),alpha = 0.25) + 
+  #geom_line(aes(group = depth,colour = depth, linetype = depth),size = 1.3) + 
+  geom_ribbon(aes(group = depth,ymin = Mg.ha.year - Mg.ha.year.se,ymax = Mg.ha.year + Mg.ha.year.se),alpha = 0.25) + 
   geom_line(aes(group = depth,colour = depth, linetype = depth),size = 1.3) + 
   labs(x = "Days after establishment",y = (expression(paste("Accumulation Rate (g m" ^ "-2","day" ^ "-1",")")))) + 
   #scale_x_discrete(breaks=c(153,520,882,1248,1619,1978))+
