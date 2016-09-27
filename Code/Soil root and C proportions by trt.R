@@ -3,36 +3,24 @@ library(dplyr)
 library(ggplot2)
 library(plotrix)
 
-my_theme<-theme(panel.grid.major = element_blank(),
-                panel.grid.minor = element_blank(),
-                panel.background = element_blank(),
-                axis.line = element_line(),
-                legend.position=c(.20,.78), legend.title=element_blank(),
-                legend.text = element_text(size=12),
-                axis.title.x = element_blank(),
-                axis.title.y = element_blank(),
-                axis.text.x = element_text(colour="black", size=16),
-                axis.text.y = element_text(colour="black", size=16)) + 
-  scale_color_manual(breaks=c("CC","P","PF"),
-                     values=c("black","blue","red"))+
-  scale_linetype_manual(breaks=c("CC","P","PF"),
-                        values=c("solid","dotted","dashed"))+
-  annotate("text", x = -Inf, y = Inf, label = "a", face="bold", hjust = -11, vjust=6.5, size = 9)
-
-yf_theme<-theme_bw()+
+this_theme<-theme_bw()+
   theme(#panel.grid.major = element_blank(),
     #panel.grid.minor = element_blank(),
     panel.background = element_blank(),
     axis.line = element_line(),
     legend.position='none', legend.title=element_blank(),
     legend.text = element_text(size=12),
-    axis.title.x = element_blank(),
-    axis.title.y = element_blank(),
+    axis.title.x = element_text(size=22,vjust=-0.5),
+    axis.title.y = element_text(size=22,angle=90, vjust=1.2),
     axis.text.x = element_text(colour="black", size=18),
-    axis.text.y = element_text(colour="black", size=18))
+    axis.text.y = element_text(colour="black", size=18), 
+    strip.text = element_text(colour="black", size=18))
+
+theme_set(this_theme)
 
 
-ds2<-read.csv("Equivalent root and C for 5 cm, each plot.csv", header=TRUE)
+
+ds2<-read.csv("Data/Equivalent root and C for 5 cm, each plot.csv", header=TRUE)
 
 ds2<-ds2%>%
   select(-plot)%>%
@@ -40,13 +28,9 @@ ds2<-ds2%>%
                         ifelse((depth == 10.0), 10,
                                ifelse((depth == 22.5), 20,
                                       ifelse((depth == 45.0), 45,
-<<<<<<< HEAD
-                                             ifelse((depth == 80.0), 80, NA))))))%>%
-=======
-                                             ifelse((depth == 80.0), 80, 100))))))%>%
->>>>>>> 34c1c73d695be63c5dc4104f56567415066408d9
+                                            ifelse((depth == 80.0), 80, 100))))))%>%
   group_by(trt, depth)%>%
-  summarise_each(funs(mean, std.error))
+  summarise_each(funs(mean(., na.rm = TRUE), std.error(., na.rm = TRUE)))
 
     
   ds2_depths_possible <- expand.grid(
@@ -85,6 +69,7 @@ rootsCC<-ggplot(cc, aes(x=depth, y=rootC_interpolated)) +
   scale_x_reverse()+
   #geom_point(shape=1) +
   geom_point(aes(y=rootC_mean), size=4, alpha=1, color="red", na.rm=T) +
+  geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error))+
   coord_flip()+
   theme(axis.text.y = element_blank())
 
@@ -93,6 +78,7 @@ rootsP<-ggplot(p, aes(x=depth, y=rootC_interpolated, color=trt, group=trt)) +
   scale_x_reverse()+
   #geom_point(shape=1) +
   geom_point(aes(y=rootC_mean), size=4, alpha=1, color="green", na.rm=T) +
+  geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error))+
   coord_flip()+
   theme(axis.text.y = element_blank())
 
@@ -102,6 +88,7 @@ rootsPF<-ggplot(pf, aes(x=depth, y=rootC_interpolated, color=trt, group=trt)) +
   scale_y_continuous(breaks = c(.1,.3,.5))+
   #geom_point(shape=1) +
   geom_point(aes(y=rootC_mean), size=4, alpha=1, color="blue", na.rm=T) +
+  geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error))+
   coord_flip()+
   theme(axis.text.y = element_blank())
 

@@ -128,6 +128,11 @@ split<-lessC %>%
          ifelse((depth == 30), mass/3,
          ifelse((depth == 60), mass/6,
          ifelse((depth == 100), mass/8, mass))))))%>%
+  mutate(rootC = ifelse((depth == 5), rootC,
+                       ifelse((depth == 15), rootC/2,
+                              ifelse((depth == 30), rootC/3,
+                                     ifelse((depth == 60), rootC/6,
+                                            ifelse((depth == 100), rootC/8, rootC))))))%>%
   mutate(carbon = ifelse((depth == 5), MgCha,
                       ifelse((depth == 15), MgCha/2,
                              ifelse((depth == 30), MgCha/3,
@@ -138,9 +143,12 @@ split<-lessC %>%
                                 ifelse((depth == 30), 22.5,
                                        ifelse((depth == 60), 45,
                                               ifelse((depth == 100), 80, NA))))))%>%
-  select(trt, plot, depth, root, carbon)%>%
+  select(trt, plot, depth, root, rootC, carbon)%>%
 arrange(trt, plot, depth)
 
+split[56,6]<-"NA"
+
+write.csv(split,file="Data/Equivalent root and C for 5 cm, each plot.csv", row.names=FALSE) 
 
 ggplot(split, aes(y=carbon, x=-depth))+
   geom_bar(stat="identity")+
