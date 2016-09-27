@@ -1,4 +1,5 @@
 library(ggplot2)
+library(dplyr)
 this_theme<-theme_bw()+
   theme(#panel.grid.major = element_blank(),
     #panel.grid.minor = element_blank(),
@@ -81,17 +82,19 @@ ratemeans2<-ratemeans[ratemeans$trt %in% c("P", "PF", "CC"),]
 ratemeans2$g.m2.day<-ratemeans2$Mg.ha.day*100
 ratemeans2$g.m2.day.se<-ratemeans2$Mg.ha.day.se*100
 
+ratemeans2$Mg.ha.year<-ratemeans2$Mg.ha.day*365
+ratemeans2$Mg.ha.year.se<-ratemeans2$Mg.ha.day.se*365
+
 ratescc<-ggplot(data = filter(ratemeans2, trt=="CC"),aes(x = day,y = g.m2.day)) + 
   geom_ribbon(aes(group = depth,ymin = g.m2.day - g.m2.day.se,ymax = g.m2.day + g.m2.day.se),alpha = 0.25) + 
   geom_line(aes(group = depth,colour = depth, linetype = depth),size = 1.3) + 
   #labs(x = "Days after establishment",y = (expression(paste("Accumulation Rate (g m" ^ "-2","day" ^ "-1",")")))) + 
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
+  scale_y_discrete(breaks=c(0.00, 0.02, 0.04))+
   #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
   scale_colour_manual(values = otPalette)+
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.line = element_line(),
+  theme(axis.line = element_line(),
+        plot.margin = unit(c(.5,.5,.5,.2), "cm"),
         legend.position="none", legend.title=element_blank(),
         legend.text = element_text(size=12),
         axis.title.x = element_blank(),
@@ -106,10 +109,8 @@ ratesp<-ggplot(data = filter(ratemeans2, trt=="P"),aes(x = day,y = g.m2.day)) +
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
   #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
   scale_colour_manual(values = otPalette)+
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.line = element_line(),
+  theme(axis.line = element_line(),
+        plot.margin = unit(c(.5,.5,.5,.6), "cm"),
         legend.position="none", legend.title=element_blank(),
         legend.text = element_text(size=12),
         axis.title.x = element_blank(),
@@ -124,10 +125,8 @@ ratespf<-ggplot(data = filter(ratemeans2, trt=="PF"),aes(x = day,y = g.m2.day)) 
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
   #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
   scale_colour_manual(values = otPalette)+
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.line = element_line(),
+  theme(axis.line = element_line(),
+        plot.margin = unit(c(.5,.5,.5,.6), "cm"),
         legend.position=c(.75, .55), legend.title=element_blank(),
         legend.text = element_text(size=22), legend.key.size=unit(1, "cm"),
         axis.title.x = element_blank(),
@@ -135,7 +134,11 @@ ratespf<-ggplot(data = filter(ratemeans2, trt=="PF"),aes(x = day,y = g.m2.day)) 
         axis.text.x = element_blank(),
         axis.text.y = element_text(colour="black", size=22))
 
-pdf("Figures/Root Accumulation and Ratesv5, three panels.pdf", width = 10, height = 15)
+library(grid)
+vplayout<- function(x,y)
+  viewport(layout.pos.row=x, layout.pos.col=y)
+
+pdf("Figures/Root Accumulation and Ratesv7, three panels.pdf", width = 10, height = 15)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(4,2, heights = unit(c(5,5,5,.39), "null"), widths = unit(c(.38,5), "null"))))
 #grid.text((expression(paste("Biomass (Mg ha" ^ "-1",")"))), rot = 90, vp = viewport(layout.pos.row = 1:5, layout.pos.col = 1), gp=gpar(fontsize=18))
@@ -145,3 +148,4 @@ print(ratescc, vp = vplayout(1,2))
 print(ratespf, vp = vplayout (2,2))
 print(ratesp, vp = vplayout(3,2))
 dev.off()
+

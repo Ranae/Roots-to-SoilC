@@ -451,6 +451,7 @@ ratespf<-ggplot(data = filter(ratemeans2, trt=="PF"),aes(x = day,y = g.m2.day)) 
         axis.text.x = element_blank(),
         axis.text.y = element_text(colour="black", size=22))
 
+###Remember! You moved this to its own file!!!
 pdf("Figures/Root Accumulation and Ratesv5, three panels.pdf", width = 10, height = 15)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(4,2, heights = unit(c(5,5,5,.39), "null"), widths = unit(c(.38,5), "null"))))
