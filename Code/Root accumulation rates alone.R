@@ -90,13 +90,31 @@ ratescc<-ggplot(data = filter(ratemeans2, trt=="CC"),aes(x = day,y = g.m2.day)) 
   geom_line(aes(group = depth,colour = depth, linetype = depth),size = 1.3) + 
   #labs(x = "Days after establishment",y = (expression(paste("Accumulation Rate (g m" ^ "-2","day" ^ "-1",")")))) + 
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
-  scale_y_discrete(breaks=c(0.00, 0.02, 0.04))+
+  scale_y_continuous(breaks=c(0.00, 0.02, 0.04))+
   #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
   scale_colour_manual(values = otPalette)+
+  annotate("text", x=200, y=0.045, label="a", size=12)+
   theme(axis.line = element_line(),
-        plot.margin = unit(c(.5,.5,.5,.2), "cm"),
+        plot.margin = unit(c(.3,.5,1,.2), "cm"),
         legend.position="none", legend.title=element_blank(),
         legend.text = element_text(size=12),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(colour="black", size=22))
+
+ratespf<-ggplot(data = filter(ratemeans2, trt=="PF"),aes(x = day,y = g.m2.day)) + 
+  geom_ribbon(aes(group = depth,ymin = g.m2.day - g.m2.day.se,ymax = g.m2.day + g.m2.day.se),alpha = 0.25) + 
+  geom_line(aes(group = depth,colour = depth, linetype = depth),size = 1.3) + 
+  labs(x = "Days after establishment",y = (expression(paste("Accumulation Rate (g m" ^ "-2","day" ^ "-1",")")))) + 
+  scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
+  #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
+  scale_colour_manual(values = otPalette)+
+  annotate("text", x=1750, y=0.5, label="b", size=12)+
+  theme(axis.line = element_line(),
+        plot.margin = unit(c(0,.5,1,.6), "cm"),
+        legend.position=c(.75, .55), legend.title=element_blank(),
+        legend.text = element_text(size=22), legend.key.size=unit(1, "cm"),
         axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         axis.text.x = element_blank(),
@@ -107,10 +125,12 @@ ratesp<-ggplot(data = filter(ratemeans2, trt=="P"),aes(x = day,y = g.m2.day)) +
   geom_line(aes(group = depth,colour = depth, linetype = depth),size = 1.3) + 
   labs(x = "Year",y = (expression(paste("Accumulation Rate (g m" ^ "-2","day" ^ "-1",")")))) + 
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
+  scale_y_continuous(breaks=c(0.00, 0.4, 0.8))+
   #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
   scale_colour_manual(values = otPalette)+
+  annotate("text", x=1750, y=0.9, label="c", size=12)+
   theme(axis.line = element_line(),
-        plot.margin = unit(c(.5,.5,.5,.6), "cm"),
+        plot.margin = unit(c(0,.5,0,.6), "cm"),
         legend.position="none", legend.title=element_blank(),
         legend.text = element_text(size=12),
         axis.title.x = element_blank(),
@@ -118,21 +138,7 @@ ratesp<-ggplot(data = filter(ratemeans2, trt=="P"),aes(x = day,y = g.m2.day)) +
         axis.text.x = element_text(colour="black", size=22, angle = 45, hjust=1, vjust=1),
         axis.text.y = element_text(colour="black", size=22))
 
-ratespf<-ggplot(data = filter(ratemeans2, trt=="PF"),aes(x = day,y = g.m2.day)) + 
-  geom_ribbon(aes(group = depth,ymin = g.m2.day - g.m2.day.se,ymax = g.m2.day + g.m2.day.se),alpha = 0.25) + 
-  geom_line(aes(group = depth,colour = depth, linetype = depth),size = 1.3) + 
-  labs(x = "Days after establishment",y = (expression(paste("Accumulation Rate (g m" ^ "-2","day" ^ "-1",")")))) + 
-  scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
-  #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
-  scale_colour_manual(values = otPalette)+
-  theme(axis.line = element_line(),
-        plot.margin = unit(c(.5,.5,.5,.6), "cm"),
-        legend.position=c(.75, .55), legend.title=element_blank(),
-        legend.text = element_text(size=22), legend.key.size=unit(1, "cm"),
-        axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(colour="black", size=22))
+
 
 library(grid)
 vplayout<- function(x,y)

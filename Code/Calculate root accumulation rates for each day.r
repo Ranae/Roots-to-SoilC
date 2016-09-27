@@ -359,8 +359,8 @@ ggplot(data = filter(massmeans3),aes(x = day,y = Mg.ha.day)) +
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013")) +
   ylim(0,4.2) + 
   scale_colour_manual(values = otPalette)+
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
+  theme(#panel.grid.major = element_blank(),
+        #panel.grid.minor = element_blank(),
         panel.background = element_blank(),
         axis.line = element_line(),
         legend.position=c(.17, .72), legend.title=element_blank(),
