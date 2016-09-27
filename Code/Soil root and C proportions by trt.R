@@ -65,41 +65,66 @@ cc <- within(cc, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
 
 theme_set(yf_theme)
 rootsCC<-ggplot(cc, aes(x=depth, y=rootC_interpolated)) +
-  geom_line(color="red", size=1.2) +
+  geom_line(color="#E06100", size=1.2) +
   scale_x_reverse()+
   #geom_point(shape=1) +
-  geom_point(aes(y=rootC_mean), size=4, alpha=1, color="red", na.rm=T) +
+  geom_point(aes(y=rootC_mean), size=4, alpha=1, color="#E06100", na.rm=T) +
   geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error))+
+  annotate("text", x=0, y=0.02, label="b", size=12)+
   coord_flip()+
-  theme(axis.text.y = element_blank())
+  theme(axis.line = element_line(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_text(colour="black", size=22),
+        axis.text.y = element_blank())
 
 rootsP<-ggplot(p, aes(x=depth, y=rootC_interpolated, color=trt, group=trt)) +
-  geom_line(color="green", size=1.2) +
+  geom_line(color="#24019B", size=1.2) +
   scale_x_reverse()+
   #geom_point(shape=1) +
-  geom_point(aes(y=rootC_mean), size=4, alpha=1, color="green", na.rm=T) +
-  geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error))+
+  geom_point(aes(y=rootC_mean), size=4, alpha=1, color="#24019B", na.rm=T) +
+  geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error), color="black")+
+  annotate("text", x=0, y=0.2, label="d", size=12)+
   coord_flip()+
-  theme(axis.text.y = element_blank())
+  theme(axis.line = element_line(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_text(colour="black", size=22),
+        axis.text.y = element_blank())
 
 rootsPF<-ggplot(pf, aes(x=depth, y=rootC_interpolated, color=trt, group=trt)) +
-  geom_line(color="blue", size=1.2) +
+  geom_line(color="#83304C", size=1.2) +
   scale_x_reverse()+
   scale_y_continuous(breaks = c(.1,.3,.5))+
   #geom_point(shape=1) +
-  geom_point(aes(y=rootC_mean), size=4, alpha=1, color="blue", na.rm=T) +
-  geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error))+
+  geom_point(aes(y=rootC_mean), size=4, alpha=1, color="#83304C", na.rm=T) +
+  geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error), color="black")+
+  annotate("text", x=0, y=0.1, label="c", size=12)+
   coord_flip()+
-  theme(axis.text.y = element_blank())
+  theme(axis.line = element_line(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_text(colour="black", size=22),
+        axis.text.y = element_blank())
 
+desert<-c("#E06100", "#24019B", "#83304C")
 carbon<-ggplot(cobsmean, aes(x=depth, y=avgC)) +
   #geom_point(shape=1) +
   geom_point(aes(y=carbon_mean, shape=trt, color=trt), size=4, alpha=1, na.rm=T) +
   scale_x_reverse()+
   geom_errorbar(aes(ymin=carbon_mean - carbon_std.error, ymax=carbon_mean + carbon_std.error ), alpha=.4)+
   geom_line(size=1.2) +
-  coord_flip()#+
-  #facet_wrap(~trt)
+  annotate("text", x=0, y=5, label="a", size=12)+
+  scale_color_manual(values = desert, labels=c("Maize", "Fertlized Prairie", "Prairie"))+
+  coord_flip()+
+  theme(axis.line = element_line(),
+        legend.position=c(.75, .35), legend.title=element_blank(),
+        legend.text = element_text(size=22), legend.key.size=unit(1, "cm"),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_text(colour="black", size=22),
+        axis.text.y = element_text(colour="black", size=22))
+  
 
 sumprops<-ds2_intpolated%>%
   group_by(trt)%>%
