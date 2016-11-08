@@ -102,12 +102,14 @@ plot(augPred(rut.60.nlme, level=0:1), main="nlme 30-60 cm")
 rutG.100 <- subset(rutG, depth == 100)
 
 fitL.100 <- nlsList(mass ~ SSlogis(day, Asym, xmid, scal), data=rutG.100)#*
-rut.100.nlme <- nlme(fitL.100, random=list(xmid ~1), method='REML')#*
+rut.100.nlme <- nlme(fitL.100, random=list(xmid ~1), method='REML', control = nlmeControl(pnlsTol = 5, msVerbose = TRUE))#*
+
+control = nlmeControl(pnlsTol = 5, msVerbose = TRUE)
 
 rut.100.lme<-lme(mass ~ c.(day), random=~c.(day)|plot, method='REML', data=rutG.100)#*
 
 anova(rut.100.nlme, rut100.lme)
-plot(augPred(rut100.lme, level=0:1), main="lme 60-100 cm")
+plot(augPred(rut.100.lme, level=0:1), main="lme 60-100 cm")
 plot(augPred(rut.100.nlme, level=0:1), main="nlme 60-100 cm")
 
 library(ggplot2)
@@ -261,23 +263,48 @@ obspred$plot<-as.factor(obspred$plot)
 obspred$plot<-factor(obspred$plot, levels = c(12, 13, 15, 21, 23, 24, 31, 32, 35, 41, 43, 46), 
                       labels = c("Rep 1", "Rep 1","Rep 1", "Rep2", "Rep 2", "Rep 2", "Rep 3", "Rep 3", "Rep 3", "Rep 4", "Rep 4", "Rep 4"))
 
+this_theme<-theme_bw()+
+  theme(#panel.grid.major = element_blank(),
+    #panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    axis.line = element_line(),
+    legend.position='none', legend.title=element_blank(),
+    legend.text = element_text(size=12),
+    plot.title = element_text(size = 23),
+    axis.title.x = element_text(size=22,vjust=-0.5),
+    axis.title.y = element_text(size=22),
+    axis.text.x = element_text(colour="black", size=16),
+    axis.text.y = element_text(colour="black", size=16), 
+    strip.text = element_text(colour="black", size=18))
+
+theme_set(this_theme)
+
+pdf(file="Figures/Root Accumulation Fits.pdf", height = 8, width = 10)
 ggplot()+
   geom_line(aes(x=day, y=mass), size=1, color="red",
             data=filter(obspred, type=="predicted", trt == "Prairie")) +  
   geom_point(aes(x=day, y=mass), size=2, color="black",
              data=filter(obspred, type=="original", trt == "Prairie")) +
-  facet_grid(depth ~ plot)  
+  facet_grid(depth ~ plot) +
+  labs(x = "Days after Establishment", y = (expression(paste("Root pool mass (Mg ha" ^ "-1",")"))))+
+  ggtitle("Prairie")
+ 
 
 ggplot()+
   geom_line(aes(x=day, y=mass), size=1, color="red",
             data=filter(obspred, type=="predicted", trt == "Fertilized Prairie")) +  
   geom_point(aes(x=day, y=mass), size=2, color="black",
              data=filter(obspred, type=="original", trt == "Fertilized Prairie")) +
-  facet_grid(depth ~ plot)
+  facet_grid(depth ~ plot)+
+  labs(x = "Days after Establishment", y = (expression(paste("Root pool mass (Mg ha" ^ "-1",")"))))+
+  ggtitle("Fertilized Prairie")
 
 ggplot()+
   geom_line(aes(x=day, y=mass), size=1, color="red",
             data=filter(obspred, type=="predicted", trt == "Maize")) +  
   geom_point(aes(x=day, y=mass), size=2, color="black",
              data=filter(obspred, type=="original", trt == "Maize")) +
-  facet_grid(depth ~ plot)
+  facet_grid(depth ~ plot)+
+  labs(x = "Days after Establishment", y = (expression(paste("Root pool mass (Mg ha" ^ "-1",")"))))+
+  ggtitle("Maize")
+dev.off()
