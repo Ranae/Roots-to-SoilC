@@ -253,10 +253,31 @@ all100<-filter(all100, plot %in% c(12, 35, 21, 43, 13, 31, 24, 46, 15, 32, 23, 4
                              ifelse((plot %in% c(15, 32, 23, 41)), "Fertilized Prairie", "wut"))))
 
 obspred<-rbind(prairie5, maize5, all15, all30, all60, all100)
+obspred$depth<-as.factor(obspred$depth)
+obspred$depth<-factor(obspred$depth, levels = c(5, 15, 30, 60, 100), 
+                      labels = c("0-5", "5-15","15-30","30-60", "60-100"))  
+
+obspred$plot<-as.factor(obspred$plot)
+obspred$plot<-factor(obspred$plot, levels = c(12, 13, 15, 21, 23, 24, 31, 32, 35, 41, 43, 46), 
+                      labels = c("Rep 1", "Rep 1","Rep 1", "Rep2", "Rep 2", "Rep 2", "Rep 3", "Rep 3", "Rep 3", "Rep 4", "Rep 4", "Rep 4"))
 
 ggplot()+
   geom_line(aes(x=day, y=mass), size=1, color="red",
             data=filter(obspred, type=="predicted", trt == "Prairie")) +  
-  geom_point(aes(x=day, y=mass), size=2, color="blue",
+  geom_point(aes(x=day, y=mass), size=2, color="black",
              data=filter(obspred, type=="original", trt == "Prairie")) +
+  facet_grid(depth ~ plot)  
+
+ggplot()+
+  geom_line(aes(x=day, y=mass), size=1, color="red",
+            data=filter(obspred, type=="predicted", trt == "Fertilized Prairie")) +  
+  geom_point(aes(x=day, y=mass), size=2, color="black",
+             data=filter(obspred, type=="original", trt == "Fertilized Prairie")) +
+  facet_grid(depth ~ plot)
+
+ggplot()+
+  geom_line(aes(x=day, y=mass), size=1, color="red",
+            data=filter(obspred, type=="predicted", trt == "Maize")) +  
+  geom_point(aes(x=day, y=mass), size=2, color="black",
+             data=filter(obspred, type=="original", trt == "Maize")) +
   facet_grid(depth ~ plot)
