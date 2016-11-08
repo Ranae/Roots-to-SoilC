@@ -10,7 +10,9 @@ rut$trt[rut$plot %in% c('16', "34", "22", "45")]<-"CS"
 rut$trt[rut$plot %in% c("12", "35", "21", "43")]<-"CC"
 rut$trt[rut$plot %in% c('14', "36", "25", "42")]<-"CCW"
 rut$trt[rut$plot %in% c("13", "31", "24", "46")]<-"P"
-rut$trt[rut$plot %in% c('15', "32", "23", "41")]<-"PF"
+rut$trt[rut$plot %in% c('15', "32", "23", "41")]<-"PF"  
+
+rut<-rut[rut$trt %in% c("CC", "P", "PF"),]
 
 rut$day[rut$year == 2008] <- 153
 rut$day[rut$year == 2009] <- 520
@@ -102,7 +104,7 @@ rutG.100 <- subset(rutG, depth == 100)
 fitL.100 <- nlsList(mass ~ SSlogis(day, Asym, xmid, scal), data=rutG.100)#*
 rut.100.nlme <- nlme(fitL.100, random=list(xmid ~1), method='REML')#*
 
-rut100.lme<-lme(mass ~ c.(day), random=~c.(day)|plot, method='REML', data=rutG.100)#*
+rut.100.lme<-lme(mass ~ c.(day), random=~c.(day)|plot, method='REML', data=rutG.100)#*
 
 anova(rut.100.nlme, rut100.lme)
 plot(augPred(rut100.lme, level=0:1), main="lme 60-100 cm")
@@ -194,4 +196,67 @@ allparam<-rbind(param5p, param5np, param15, param30, param60, param100)
 
 write.csv(allparam, file="Logistic parameters of root accumulationv2.csv", row.names=FALSE)
 
+prairies5<-augPred(rut.5.nlme.p)
 
+library(ggplot2)  
+theme_set(theme_bw())
+ggplot()+
+  geom_line(aes(x=day, y=mass), size=1, color="red",
+             data=filter(prairies5, .type=="predicted")) +  
+  geom_point(aes(x=day, y=mass), size=2, color="blue",
+          data=filter(prairies5, .type=="original")) +
+  facet_wrap(~.groups, nrow = 2)
+
+prairie5<- augPred(rut.5.nlme.p)
+colnames(prairie5)<-c("day", "plot", "mass", "type")
+prairie5<-filter(prairie5, plot %in% c(12, 35, 21, 43, 13, 31, 24, 46, 15, 32, 23, 41))%>%
+  mutate(depth = "5")%>%
+  mutate(trt = ifelse((plot %in% c(12, 35, 21, 43)), "Maize",
+                       ifelse((plot %in% c(13, 31, 24, 46)), "Prairie", 
+                               ifelse((plot %in% c(15, 32, 23, 41)), "Fertilized Prairie", "wut"))))
+
+maize5<- augPred(rut.5.nlme.np)
+colnames(maize5)<-c("day", "plot", "mass", "type")
+maize5<-filter(maize5, plot %in% c(12, 35, 21, 43, 13, 31, 24, 46, 15, 32, 23, 41))%>%
+  mutate(depth = "5")%>%
+  mutate(trt = ifelse((plot %in% c(12, 35, 21, 43)), "Maize",
+                      ifelse((plot %in% c(13, 31, 24, 46)), "Prairie", 
+                             ifelse((plot %in% c(15, 32, 23, 41)), "Fertilized Prairie", "wut"))))
+
+all15<- augPred(rut.15.nlme)
+colnames(all15)<-c("day", "plot", "mass", "type")
+all15<-filter(all15, plot %in% c(12, 35, 21, 43, 13, 31, 24, 46, 15, 32, 23, 41))%>%
+  mutate(depth = "15")%>%
+  mutate(trt = ifelse((plot %in% c(12, 35, 21, 43)), "Maize",
+                      ifelse((plot %in% c(13, 31, 24, 46)), "Prairie", 
+                             ifelse((plot %in% c(15, 32, 23, 41)), "Fertilized Prairie", "wut"))))
+all30<- augPred(rut.30.nlme)
+colnames(all30)<-c("day", "plot", "mass", "type")
+all30<-filter(all30, plot %in% c(12, 35, 21, 43, 13, 31, 24, 46, 15, 32, 23, 41))%>%
+  mutate(depth = "30")%>%
+  mutate(trt = ifelse((plot %in% c(12, 35, 21, 43)), "Maize",
+                      ifelse((plot %in% c(13, 31, 24, 46)), "Prairie", 
+                             ifelse((plot %in% c(15, 32, 23, 41)), "Fertilized Prairie", "wut"))))
+all60<- augPred(rut.60.nlme)
+colnames(all60)<-c("day", "plot", "mass", "type")
+all60<-filter(all60, plot %in% c(12, 35, 21, 43, 13, 31, 24, 46, 15, 32, 23, 41))%>%
+  mutate(depth = "60")%>%
+  mutate(trt = ifelse((plot %in% c(12, 35, 21, 43)), "Maize",
+                      ifelse((plot %in% c(13, 31, 24, 46)), "Prairie", 
+                             ifelse((plot %in% c(15, 32, 23, 41)), "Fertilized Prairie", "wut"))))
+all100<- augPred(rut.100.lme)
+colnames(all100)<-c("day", "plot", "mass", "type")
+all100<-filter(all100, plot %in% c(12, 35, 21, 43, 13, 31, 24, 46, 15, 32, 23, 41))%>%
+  mutate(depth = "100")%>%
+  mutate(trt = ifelse((plot %in% c(12, 35, 21, 43)), "Maize",
+                      ifelse((plot %in% c(13, 31, 24, 46)), "Prairie", 
+                             ifelse((plot %in% c(15, 32, 23, 41)), "Fertilized Prairie", "wut"))))
+
+obspred<-rbind(prairie5, maize5, all15, all30, all60, all100)
+
+ggplot()+
+  geom_line(aes(x=day, y=mass), size=1, color="red",
+            data=filter(obspred, type=="predicted", trt == "Prairie")) +  
+  geom_point(aes(x=day, y=mass), size=2, color="blue",
+             data=filter(obspred, type=="original", trt == "Prairie")) +
+  facet_grid(depth ~ plot)
