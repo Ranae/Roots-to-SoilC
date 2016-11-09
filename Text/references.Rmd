@@ -1,0 +1,13 @@
+---
+title: "Untitled"
+author: "Ranae Dietzel"
+date: "November 9, 2016"
+output: word_document
+bibliography: bibliography.bib
+csl: soil.csl
+---
+
+@Upson2016Soil
+
+#References 
+

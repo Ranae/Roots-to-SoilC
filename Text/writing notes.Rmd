@@ -10,29 +10,18 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Checklist for giving to coauthors  
-- [x] Revise to emphasize C:N ratios, not quality  
 - [] Fix corn root curve and prairie negative root value  
-- []   Add error bars to root C  
+- [] Add error bars to root C  
 - [] Address Castellano's comments  
 - [] Make soil characteristics table  
 - [] Improve figures for smaller size  
- Root pool mass figure  
-- [x]   Fix facet labels  
-- [x]   Enlarge legend  
-- [x]   Enlarge axes labels  
-- [x]   Change color scheme  
 - [] Increase font sizes in Figure 2
 - [] Incorporate literature  
-
-- [x] Write conclusion
-- [] Materials and Methods
-- []   Table 1  
+- [] Write Abstract
 - [] Fix all the tables, really
-- [x] Those appendix figures  
 - [] Maize planting dates  
-- [] Change g/m2/day to Mg/year -- no, don't do this 
-- [x] Format for Soil
 - [] Change all figures to Times font
+- [] Make bibliography
      
      
 
