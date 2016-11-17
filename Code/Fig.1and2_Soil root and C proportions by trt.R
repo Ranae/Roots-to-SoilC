@@ -63,7 +63,7 @@ cobsmean<-ds2_intpolated%>%
 propfig <- within(propfig, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
 cc <- within(cc, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
 
-theme_set(yf_theme)
+
 rootsCC<-ggplot(cc, aes(x=depth, y=rootC_interpolated)) +
   geom_line(color="#E06100", size=1.2) +
   scale_x_reverse()+
@@ -133,7 +133,7 @@ sumprops<-ds2_intpolated%>%
   mutate(proprootC = rootC_interpolated/totalrootC,
          propcarbon = carbon_interpolated/totalcarbon)
 
-theme_set(yf_theme)
+
   ggplot(sumprops, aes(x=-depth, y=proprootC)) +
  geom_line(color="green", size=1.2) +
  geom_line(aes(y=propcarbon), color="brown", size=1.2) +
@@ -205,15 +205,15 @@ kable(split, digits = 2, caption = "Above vs below 20 cm")
     scale_fill_discrete(breaks=c("CC", "P", "PF"), 
                         labels = c("Continuous Corn", "Prairie", "Fertilized Prairie"))+
     guides(col = guide_legend(reverse = FALSE))+
-    labs(y = "Root Carbon (Mg/ha)",x = "Depth (cm)")+
-    theme(panel.grid.major = element_blank(),
+    labs(y = (expression(paste("Root Carbon (Mg ha" ^ "-1",")"))),x = "Depth (cm)")+
+    theme(#panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
           panel.background = element_blank(),
           axis.line = element_line(),
-          legend.position=c(.70,.25), legend.title=element_blank(),
-          legend.text = element_text(size=12),
-          axis.title.x = element_text(size=14,vjust=-0.5),
-          axis.title.y = element_text(size=14,angle=90),
-          axis.text.x = element_text(colour="black", size=16),
-          axis.text.y = element_text(colour="black", size=16))
+          legend.position=c(.65,.35), legend.title=element_blank(), 
+          legend.key.size=unit(.75, "cm"), legend.text = element_text(size=18),
+          axis.title.x = element_text(size=20),
+          axis.title.y = element_text(size=20,angle=90),
+          axis.text.x = element_text(colour="black", size=20),
+          axis.text.y = element_text(colour="black", size=20))
   dev.off()

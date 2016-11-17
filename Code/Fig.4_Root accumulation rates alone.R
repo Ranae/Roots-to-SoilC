@@ -144,7 +144,7 @@ library(grid)
 vplayout<- function(x,y)
   viewport(layout.pos.row=x, layout.pos.col=y)
 
-pdf("Figures/Root Accumulation and Ratesv7, three panels.pdf", width = 10, height = 15)
+pdf("Figures/Root Accumulation and Ratesv7, three panels.pdf", width = 10, height = 15, family = "Times")
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(4,2, heights = unit(c(5,5,5,.39), "null"), widths = unit(c(.38,5), "null"))))
 #grid.text((expression(paste("Biomass (Mg ha" ^ "-1",")"))), rot = 90, vp = viewport(layout.pos.row = 1:5, layout.pos.col = 1), gp=gpar(fontsize=18))

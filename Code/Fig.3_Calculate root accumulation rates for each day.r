@@ -350,7 +350,7 @@ a100<-ggplot(data = filter(massmeans2, depth == 100),aes(x = day,y = Mg.ha.day))
 
 
 ###This one is in the publication, Figure 3
-pdf(file = "Figures/Root accumulation by mass.pdf", height = 8, width = 10)
+pdf(file = "Figures/Root accumulation by mass.pdf", height = 8, width = 10, family = "Times")
 ggplot(data = filter(massmeans3),aes(x = day,y = Mg.ha.day)) + 
   geom_ribbon(aes(group = depth,ymin = Mg.ha.day - Mg.ha.day.se,ymax = Mg.ha.day + Mg.ha.day.se),alpha = 0.25) + 
   geom_line(aes(group = depth,colour = depth, linetype=depth),size = 1.3) + 

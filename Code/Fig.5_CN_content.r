@@ -132,6 +132,6 @@ pdf("Figures/CN ratios over timev2.pdf",width = 8, height = 8)
 print(d)
 dev.off()
 
-pdf("Figures/CN ratios over timev2, stacked depth.pdf",width = 8, height = 16)
+pdf("Figures/CN ratios over timev2, stacked depth.pdf",width = 8, height = 16, family = "Times")
 print(e)
 dev.off()
