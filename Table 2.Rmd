@@ -1,3 +1,11 @@
+---
+title: "Soil characteristic table"
+author: "Ranae Dietzel"
+date: "November 22, 2016"
+output: word_document
+---
+
+```{r, echo=FALSE}
 library(tidyverse)
 tex<- read_csv("Data/Characterization Summary for COBS 2008 Fall Soil Samples.csv"
                ,skip = 2)
@@ -37,3 +45,5 @@ char<-full_join(mean_cn, mean_tex, by = "depth")%>%
   rename(Depth = depth)
 
 knitr::kable(char, digits = c(2, 2, 2, 2, 1, 1,1, 1))
+
+```
