@@ -15,12 +15,10 @@ knitr::opts_chunk$set(echo = TRUE)
 - [] Address Castellano's comments  
 - [] Make soil characteristics table  
 - [] Improve figures for smaller size  
-- [] Increase font sizes in Figure 2
-- [] Incorporate literature  
+- [] *Incorporate literature*  
 - [] Write Abstract
 - [] Fix all the tables, really
 - [] Maize planting dates  
-- [] Change all figures to Times font
 - [] Make bibliography
      
      
