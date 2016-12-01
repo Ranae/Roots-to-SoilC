@@ -44,6 +44,6 @@ char<-full_join(mean_cn, mean_tex, by = "depth")%>%
   select(depth, BD, pH, TC, TN, sand, silt, clay)%>%
   rename(Depth = depth)
 
-knitr::kable(char, digits = c(2, 2, 2, 2, 1, 1,1, 1))
+knitr::kable(char, digits = c(2, 2, 2, 2, 2, 1,1, 1))
 
 ```

@@ -63,5 +63,5 @@ turn2<-turn%>%
   select(trt, input, gain, loss, pool, k, mrt)
   
 
-kable(turn2, digits = 2, caption = "Root pool decomposition, masses in g/m^2")
+knitr::kable(turn2, digits = 2, caption = "Root pool decomposition, masses in g/m^2")
 ```
