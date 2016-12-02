@@ -1,0 +1,67 @@
+---
+title: "Root turnover table"
+author: "Ranae Dietzel"
+date: "December 2, 2016"
+output: word_document
+---
+
+
+```{r, echo=FALSE, errors=TRUE}  
+library(tidyverse)
+library(knitr)
+
+roots<-read.table("Data/rootplotmeans.txt", header = TRUE, stringsAsFactors=FALSE)
+#roots$plot<-factor(plot)
+roots<-roots[roots$trt %in% c("P", "PF"),]
+
+ggplot(roots, aes(x=year, y=mass, color=trt, group=trt))+
+  geom_point()+
+  facet_grid(depth ~ plot)
+
+top<-roots%>%
+  filter(depth < 60)%>%
+  group_by(year, trt, depth, point)%>%
+  summarize(mean = mean(mass))%>%
+  group_by(year, trt)%>%
+  summarize(total = sum(mean))%>%
+  filter(year %in% c(2009, 2010, 2011))%>%
+  print()
+
+###k=input/pool
+#input from 2015 Crop Science publication, pool from 0-30 cm mass calculated above
+#assumes steady state, inputs = losses 
+#2010P <- 367.0/748.4
+#2010PF <- 146.3/230.6
+#2011P <- 386.6/757.6
+#2011PF <- 168.3/342.1 
+
+###
+P10 <- 367.0
+PF10 <- 146.3
+P11 <- 386.6
+PF11 <- 168.3
+
+
+turn<-c(367.0, 146.3, 386.6, 168.3, 55.8, 47.9)  #Inputs from Crop Science
+turn<-as.data.frame(turn)
+colnames(turn)<-"input"
+turn$trt<-c("P10" ,"PF10", "P11", "PF11", "C10", "C11")
+turn$gain<-c(104.04, 62.0, 77.75, 55.12, 17.89, 16.43)  #Gains from where? From curve fits somehow
+#turn$gain<-c(237, 9.1, -96, 111, 2, 3) #Measured differences between years
+turn$loss<-turn$input-turn$gain
+turn$pool<-c(748.4, 230.6, 757.6, 342.1, 44.1, 47.2)
+turn$k<-turn$loss/turn$pool
+turn$mrt<-1/turn$k
+
+turn2<-turn%>%
+  mutate(trt = ifelse((trt == "P10"), "Prairie2010",
+                         ifelse((trt == "P11"), "Prairie2011",
+                                ifelse((trt == "PF10"), "FertilizedPrairie2010",
+                                       ifelse((trt == "PF11"), "FertilizedPrairie2011",
+                                              ifelse((trt == "C10"), "Maize2010", "Maize2011"))))))%>%
+  select(trt, input, gain, loss, pool, k, mrt)
+  
+
+kable(turn2, digits = c(0,0,0,0,0,2,2), caption = "Root pool decomposition, masses in g/m^2")  
+```  
+
