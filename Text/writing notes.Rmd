@@ -11,13 +11,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Checklist for giving to coauthors  
 - [] Fix corn root curve and prairie negative root value  
-- [] Add error bars to root C  
 - [] Address Castellano's comments  
 - [] Make soil characteristics table  
 - [] Improve figures for smaller size  
 - [] *Incorporate literature*  
 - [] Write Abstract
-- [] Fix all the tables, really
+- [x] Fix all the tables, really - okay for now
 - [] Maize planting dates  
 - [] Make bibliography
      
@@ -30,6 +29,30 @@ Roles of increases aeration
          Addition of fertilizer
          Changes in residue amount and quality  
 Slower increases at deeper depths than shallower depths may be indicative that accumulation there is more dependent upon the carryover of roots from previous years than at shallower depths.  
+
+Root growth slows as systems become more established.  
+
+
+##Omonode 2006
+    - After six years, organic C differences (1 m) between corn and prairie in only 30% of sites
+
+Gebhart 1994 The CRP increases soil organic carbon. J. Soil Water Conserv. 49, 488-492
+
+Zan et al. 2001 Carbon sequestration in perennial bioenergy, annual corn and uncultivated systems in
+southern Quebec. Agric. Ecosys. Environ. 86, 35-144
+
+Dahlman and Kucera, 1965
+
+Garten and Wullschleger 2000 Soil carbon inventories under a bioenergy crop (switchgrass): measurement limitations. J. Environ. Qual. 28, 1359-1365
+
+Rumpel, C., Kogel-Knabner, I., Bruhn, F., 2002. Vertical distribution, age,and chemical composition of organic carbon in two forest soils of different pedogenesis. Organic Geochem. 33, 1131-1142.
+
+    - Maybe high prairie root C:N ratios is why we don't see huge increases after restoration - not just       soil texture  
+
+Ma, Z.,Wood, C.A., Bransby, D.J., 2000c. Soil management impacts on soil carbon sequestration by switchgrass. Biomass Bioenergy 18, 469-477. - *N fertilization leads to faster turnover in grasses*  
+
+Lemaire, G., Wilkins, R., Hodgson, J., 2005. Challenges for grassland science: management research priorities. Agric. Ecosys. Environ. 108, 99-108.
+
 
 
 
