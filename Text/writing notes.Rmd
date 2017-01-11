@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Checklist for giving to coauthors  
 - [] Fix corn root curve and prairie negative root value  
 - [] Address Castellano's comments  
-- [] Make soil characteristics table  
+- [x] Make soil characteristics table  
 - [] Improve figures for smaller size  
 - [] *Incorporate literature*  
 - [] Write Abstract
