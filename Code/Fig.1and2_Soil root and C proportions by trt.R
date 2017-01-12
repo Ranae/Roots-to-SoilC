@@ -60,8 +60,8 @@ cobsmean<-ds2_intpolated%>%
   full_join(ds2_intpolated, by = "depth")
   #gather(key=variable, value=value, c(avgC, rootC, carbon, rootC_interpolated, carbon_interpolated))%>%
 
-propfig <- within(propfig, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
-cc <- within(cc, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
+#propfig <- within(propfig, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
+#cc <- within(cc, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
 
 
 rootsCC<-ggplot(cc, aes(x=depth, y=rootC_interpolated)) +
@@ -82,7 +82,7 @@ rootsP<-ggplot(p, aes(x=depth, y=rootC_interpolated, color=trt, group=trt)) +
   geom_line(color="#24019B", size=1.2) +
   scale_x_reverse()+
   #geom_point(shape=1) +
-  geom_point(aes(y=rootC_mean), size=4, alpha=1, color="#24019B", na.rm=T) +
+  geom_point(aes(y=rootC_mean), size=4.1, alpha=1, color="#24019B", na.rm=T) +
   geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error), color="black")+
   annotate("text", x=0, y=0.2, label="d", size=12)+
   coord_flip()+
@@ -115,11 +115,12 @@ carbon<-ggplot(cobsmean, aes(x=depth, y=avgC)) +
   geom_errorbar(aes(ymin=carbon_mean - carbon_std.error, ymax=carbon_mean + carbon_std.error ), alpha=.4)+
   geom_line(size=1.2) +
   annotate("text", x=0, y=5, label="a", size=12)+
-  scale_color_manual(values = desert, labels=c("Maize", "Fertlized Prairie", "Prairie"))+
+  scale_color_manual(values = desert, breaks=c("CC", "PF", "P"), labels=c("Maize", "Fertilized Prairie", "Prairie"))+
+  scale_shape_manual(values = c(15, 17, 19), breaks=c("CC", "PF", "P"), labels=c("Maize", "Fertilized Prairie", "Prairie"))+
   coord_flip()+
   theme(axis.line = element_line(),
-        legend.position=c(.75, .35), legend.title=element_blank(),
-        legend.text = element_text(size=22), legend.key.size=unit(1, "cm"),
+        legend.position=c(.62, .35), legend.title=element_blank(),
+        legend.text = element_text(size=14), legend.key.size=unit(.8, "cm"),
         axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         axis.text.x = element_text(colour="black", size=22),
@@ -197,13 +198,13 @@ kable(split, digits = 2, caption = "Above vs below 20 cm")
   
   dodge <- position_dodge(width=.9)
   ds2_intpolated <- within(ds2_intpolated, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
+  
   pdf("Figures/Roots and Soil 2013 Absolute Differences.pdf", width = 5, height = 8, family = "Times") 
   ggplot(ds2_intpolated, aes(x=factor(depth), y = rootC_interpolated, fill=trt)) + 
     geom_bar(stat = "identity", position = "dodge") +
     #geom_errorbar(aes(ymax = poxconc + poxconcse, ymin=poxconc - poxconcse), position = dodge, width=0.25) +
     coord_flip()+
-    scale_fill_discrete(breaks=c("CC", "P", "PF"), 
-                        labels = c("Continuous Corn", "Prairie", "Fertilized Prairie"))+
+    scale_fill_manual(values = desert, breaks=c("CC", "PF", "P"), labels=c("Maize", "Fertilized Prairie", "Prairie"))+
     guides(col = guide_legend(reverse = FALSE))+
     labs(y = (expression(paste("Root Carbon (Mg ha" ^ "-1",")"))),x = "Depth (cm)")+
     theme(#panel.grid.major = element_blank(),
