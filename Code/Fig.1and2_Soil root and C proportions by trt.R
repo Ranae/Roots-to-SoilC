@@ -126,7 +126,7 @@ carbon<-ggplot(cobsmean, aes(x=depth, y=avgC)) +
         axis.text.x = element_text(colour="black", size=22),
         axis.text.y = element_text(colour="black", size=22))
   
-
+###Table 3, is this you?
 sumprops<-ds2_intpolated%>%
   group_by(trt)%>%
   mutate(totalrootC = sum(rootC_interpolated), 
@@ -151,7 +151,7 @@ split<-sumprops%>%
   mutate(proprootC = splitR/totalrootC,
          propcarbon = splitC/totalcarbon)
 
-kable(split, digits = 2, caption = "Above vs below 20 cm")
+knitr::kable(split, digits = 2, caption = "Above vs below 20 cm")
   
  
 

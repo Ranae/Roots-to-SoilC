@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - [] Improve figures for smaller size  
 - [] *Incorporate literature*  
 - [] Write Abstract
-- [x] Fix all the tables, really - okay for now
+- [x] Fix all the tables, really - okay for now - table 3 is from excel???
 - [] Maize planting dates  
 - [] Make bibliography
      
