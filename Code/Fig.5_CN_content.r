@@ -74,13 +74,14 @@ ggplot(cnsum, aes(x=factor(year), y = CN, fill=trt)) +
 theme_set(theme_bw())
 
 ##CN ratios over depths (profile), each year
+desert<-c("#E06100", "#24019B", "#83304C")
 e<-ggplot(data = cnsum2,aes(x = point,y = CN)) + 
     geom_ribbon(aes(group = trt,ymin = CN - CNse,ymax = CN + CNse),alpha = 0.25) + 
     geom_line(aes(group = trt,linetype = trt,colour = trt),size = 1.5) + 
 	coord_flip() +
 	facet_wrap(~ year, ncol = 1)+
 	labs(x = "Depth (cm)",y = "C:N Ratio") + 
-  scale_color_discrete(breaks=c("CC", "PF", "P"), 
+  scale_color_manual(values = desert, breaks=c("CC", "PF", "P"), 
                       labels = c("Maize", "Fertilized Prairie", "Prairie"))+
   scale_linetype_discrete(breaks=c("CC", "PF", "P"), 
                        labels = c("Maize", "Fertilized Prairie", "Prairie"))+
