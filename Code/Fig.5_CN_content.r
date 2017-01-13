@@ -81,9 +81,9 @@ e<-ggplot(data = cnsum2,aes(x = point,y = CN)) +
 	facet_wrap(~ year, ncol = 1)+
 	labs(x = "Depth (cm)",y = "C:N Ratio") + 
   scale_color_discrete(breaks=c("CC", "PF", "P"), 
-                      labels = c("Continuous Corn", "Fertilized Prairie", "Prairie"))+
+                      labels = c("Maize", "Fertilized Prairie", "Prairie"))+
   scale_linetype_discrete(breaks=c("CC", "PF", "P"), 
-                       labels = c("Continuous Corn", "Fertilized Prairie", "Prairie"))+
+                       labels = c("Maize", "Fertilized Prairie", "Prairie"))+
     theme(#panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
           #panel.background = element_blank(),
