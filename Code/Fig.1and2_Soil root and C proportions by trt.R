@@ -23,7 +23,7 @@ theme_set(this_theme)
 ds2<-read.csv("Data/Equivalent root and C for 5 cm, each plot.csv", header=TRUE)
 
 fake<-tibble(trt = c("CC", "PF", "P"), plot = c("12", "32", "13"), depth = c("105", "105", "105"),
-                    root = c("NA", "NA", "NA"), rootC = c(.0001, .0001, .0001), carbon = c("NA", "NA", "NA"))
+                    root = c(NA, NA, NA), rootC = c(.0001, .0001, .0001), carbon = c(NA, NA, NA))
 ds2<-rbind(ds2, fake)
 
 ds2<-ds2%>%
