@@ -38,7 +38,7 @@ ds2<-ds2%>%
 
     
   ds2_depths_possible <- expand.grid(
-    depth            = seq(from=min(ds2$depth), max(100), by=5), #Decide resolution here.
+    depth            = seq(from=min(ds2$depth), max(105), by=5), #Decide resolution here.
     trt              = c("CC", "P", "PF"),
     stringsAsFactors = FALSE
   )
@@ -70,7 +70,7 @@ cobsmean<-ds2_intpolated%>%
 
 rootsCC<-ggplot(cc, aes(x=depth, y=rootC_interpolated)) +
   geom_line(color="#E06100", size=1.2) +
-  scale_x_reverse()+
+  scale_x_reverse(limits = c(100, -3))+
   #geom_point(shape=1) +
   geom_point(aes(y=rootC_mean), size=4, alpha=1, color="#E06100", na.rm=T) +
   geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error))+
