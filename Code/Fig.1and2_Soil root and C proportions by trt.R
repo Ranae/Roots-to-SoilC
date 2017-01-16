@@ -22,13 +22,17 @@ theme_set(this_theme)
 
 ds2<-read.csv("Data/Equivalent root and C for 5 cm, each plot.csv", header=TRUE)
 
+fake<-tibble(trt = c("CC", "PF", "P"), plot = c("12", "32", "13"), depth = c("105", "105", "105"),
+                    root = c("NA", "NA", "NA"), rootC = c(.0001, .0001, .0001), carbon = c("NA", "NA", "NA"))
+ds2<-rbind(ds2, fake)
+
 ds2<-ds2%>%
   select(-plot)%>%
   mutate(depth = ifelse((depth == 2.5), 0,
                         ifelse((depth == 10.0), 10,
                                ifelse((depth == 22.5), 20,
                                       ifelse((depth == 45.0), 45,
-                                            ifelse((depth == 80.0), 80, 100))))))%>%
+                                            ifelse((depth == 80.0), 80, 105))))))%>%
   group_by(trt, depth)%>%
   summarise_each(funs(mean(., na.rm = TRUE), std.error(., na.rm = TRUE)))
 
@@ -126,7 +130,7 @@ carbon<-ggplot(cobsmean, aes(x=depth, y=avgC)) +
         axis.text.x = element_text(colour="black", size=22),
         axis.text.y = element_text(colour="black", size=22))
   
-###Table 3, is this you?
+###Table 3, is this you? Yes. It is.
 sumprops<-ds2_intpolated%>%
   group_by(trt)%>%
   mutate(totalrootC = sum(rootC_interpolated), 
