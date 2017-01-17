@@ -84,7 +84,7 @@ rootsCC<-ggplot(cc, aes(x=depth, y=rootC_interpolated)) +
 
 rootsP<-ggplot(p, aes(x=depth, y=rootC_interpolated, color=trt, group=trt)) +
   geom_line(color="#24019B", size=1.2) +
-  scale_x_reverse()+
+  scale_x_reverse(limits = c(100, -3))+
   #geom_point(shape=1) +
   geom_point(aes(y=rootC_mean), size=4.1, alpha=1, color="#24019B", na.rm=T) +
   geom_errorbar(aes(ymin=rootC_mean - rootC_std.error, ymax=rootC_mean + rootC_std.error), color="black")+
@@ -98,7 +98,7 @@ rootsP<-ggplot(p, aes(x=depth, y=rootC_interpolated, color=trt, group=trt)) +
 
 rootsPF<-ggplot(pf, aes(x=depth, y=rootC_interpolated, color=trt, group=trt)) +
   geom_line(color="#83304C", size=1.2) +
-  scale_x_reverse()+
+  scale_x_reverse(limits = c(100, -3))+
   scale_y_continuous(breaks = c(.1,.3,.5))+
   #geom_point(shape=1) +
   geom_point(aes(y=rootC_mean), size=4, alpha=1, color="#83304C", na.rm=T) +
@@ -115,7 +115,7 @@ desert<-c("#E06100", "#24019B", "#83304C")
 carbon<-ggplot(cobsmean, aes(x=depth, y=avgC)) +
   #geom_point(shape=1) +
   geom_point(aes(y=carbon_mean, shape=trt, color=trt), size=4, alpha=1, na.rm=T) +
-  scale_x_reverse()+
+  scale_x_reverse(limits = c(100, -3))+
   geom_errorbar(aes(ymin=carbon_mean - carbon_std.error, ymax=carbon_mean + carbon_std.error ), alpha=.4)+
   geom_line(size=1.2) +
   annotate("text", x=0, y=5, label="a", size=12)+
@@ -204,9 +204,10 @@ knitr::kable(split, digits = 2, caption = "Above vs below 20 cm")
   ds2_intpolated <- within(ds2_intpolated, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
   
   pdf("Figures/Roots and Soil 2013 Absolute Differences.pdf", width = 5, height = 8, family = "Times") 
-  ggplot(ds2_intpolated, aes(x=factor(depth), y = rootC_interpolated, fill=trt)) + 
+  ggplot(ds2_intpolated, aes(x=depth, y = rootC_interpolated, fill=trt)) + 
     geom_bar(stat = "identity", position = "dodge") +
     #geom_errorbar(aes(ymax = poxconc + poxconcse, ymin=poxconc - poxconcse), position = dodge, width=0.25) +
+    scale_x_reverse(limits = c(100, -3))+
     coord_flip()+
     scale_fill_manual(values = desert, breaks=c("CC", "PF", "P"), labels=c("Maize", "Fertilized Prairie", "Prairie"))+
     guides(col = guide_legend(reverse = FALSE))+

@@ -10,14 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Checklist for giving to coauthors  
-- [] Fix corn root curve and prairie negative root value  
 - [] Address Castellano's comments  
-- [x] Make soil characteristics table  
 - [] Improve figures for smaller size  
 - [] *Incorporate literature*  
 - [] Write Abstract
 - [x] Fix all the tables, really - okay for now - table 3 is from excel???
-- [] Maize planting dates  
+- [] Maize planting dates and management
 - [] Make bibliography
      
      
