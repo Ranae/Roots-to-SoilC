@@ -1,0 +1,16 @@
+---
+title: "roots_to_soil bib"
+csl: soil.csl
+output: word_document
+bibliography: roots_to_soil_C.bibtex
+---
+
+
+##References
+
+Blah blah [@jarchow2013; @van2007].
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
