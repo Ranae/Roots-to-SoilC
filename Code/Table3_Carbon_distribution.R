@@ -1,0 +1,86 @@
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(plotrix)
+
+this_theme<-theme_bw()+
+  theme(#panel.grid.major = element_blank(),
+    #panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    axis.line = element_line(),
+    legend.position='none', legend.title=element_blank(),
+    legend.text = element_text(size=12),
+    axis.title.x = element_text(size=22,vjust=-0.5),
+    axis.title.y = element_text(size=22,angle=90, vjust=1.2),
+    axis.text.x = element_text(colour="black", size=18),
+    axis.text.y = element_text(colour="black", size=18), 
+    strip.text = element_text(colour="black", size=18))
+
+theme_set(this_theme)
+
+
+
+ds2<-read.csv("Data/Equivalent root and C for 5 cm, each plot.csv", header=TRUE)
+
+fake<-tibble(trt = c("CC", "PF", "P"), plot = c("12", "32", "13"), depth = c("105", "105", "105"),
+             root = c(NA, NA, NA), rootC = c(.0001, .0001, .0001), carbon = c(NA, NA, NA))
+ds2<-rbind(ds2, fake)
+
+ds2<-ds2%>%
+  select(-plot)%>%
+  mutate(depth = ifelse((depth == 2.5), 0,
+                        ifelse((depth == 10.0), 10,
+                               ifelse((depth == 22.5), 20,
+                                      ifelse((depth == 45.0), 45,
+                                             ifelse((depth == 80.0), 80, 105))))))%>%
+  group_by(trt, depth)%>%
+  summarise_each(funs(mean(., na.rm = TRUE), std.error(., na.rm = TRUE)))
+
+
+ds2_depths_possible <- expand.grid(
+  depth            = seq(from=min(ds2$depth), max(105), by=5), #Decide resolution here.
+  trt              = c("CC", "P", "PF"),
+  stringsAsFactors = FALSE
+)
+
+ds2_intpolated <- ds2 %>% 
+  right_join(ds2_depths_possible, by=c("trt", "depth")) %>% #Incorporate locations to interpolate
+  group_by(trt)%>%
+  mutate(
+    rootC_interpolated     = spline(x=depth, y=rootC_mean  , xout=depth,  method="natural")$y,
+    carbon_interpolated   = spline(x=depth, y=carbon_mean, xout=depth,  method="natural")$y
+  ) %>% 
+  ungroup()
+
+#ds2_intpolated_rev <- within(ds2_intpolated, depth <- ordered(depth, levels = rev(sort(unique(depth)))))
+
+cc<-ds2_intpolated%>%filter(trt == "CC")
+pf<-ds2_intpolated%>%filter(trt == "PF")
+p<-ds2_intpolated%>%filter(trt == "P")
+
+###Table 3, is this you? Yes. It is.
+sumprops<-ds2_intpolated%>%
+  group_by(trt)%>%
+  mutate(totalrootC = sum(rootC_interpolated), 
+         totalcarbon = sum(carbon_interpolated))%>%
+  mutate(proprootC = rootC_interpolated/totalrootC,
+         propcarbon = carbon_interpolated/totalcarbon)
+
+
+ggplot(sumprops, aes(x=-depth, y=proprootC)) +
+  geom_line(color="green", size=1.2) +
+  geom_line(aes(y=propcarbon), color="brown", size=1.2) +
+  coord_flip()+
+  facet_wrap(~trt)
+
+split<-sumprops%>%
+  mutate(place = ifelse((depth %in% c(0:20)), "top", "bottom"))%>%
+  group_by(trt, place)%>%
+  summarise(splitC = sum(carbon_interpolated), splitR = sum(rootC_interpolated))%>%
+  group_by(trt)%>%
+  mutate(totalrootC = sum(splitR), 
+         totalcarbon = sum(splitC))%>%
+  mutate(proprootC = splitR/totalrootC,
+         propcarbon = splitC/totalcarbon)
+
+knitr::kable(split, digits = 2, caption = "Above vs below 20 cm")

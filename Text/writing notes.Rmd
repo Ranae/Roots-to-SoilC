@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - [] *Incorporate literature*  
 - [x] Write Abstract
 - [x] Fix all the tables, really - okay for now - table 3 is from excel???
-- [] Maize planting dates and management
+- [x] Maize planting dates and management
 - [] Make bibliography
 
 Many comparisons of perennial and annual cropping systems have failed to find differences in soil organic C levels, especially at deeper depths (Omonde et al. 2006, check dissertation for others).  O'Brien at el. (2010) found soil organic C levels to decrease below 10 cm after the reconstruction of prairie systems.  Such results are often attributed to C saturation     
