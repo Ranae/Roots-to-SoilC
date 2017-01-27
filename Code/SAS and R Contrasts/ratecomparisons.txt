@@ -1,0 +1,18 @@
+
+data roots;
+infile "\\iastate.edu\cyfiles\rdietzel\Documents\Downloads\roots.csv" dsd firstobs=2;
+input year block $ plot $ trt  $ depth mass ;
+run;
+
+proc print data = roots;run;
+
+ods pdf file = 'ranae_roots.pdf';
+proc glimmix data = roots;
+class block core trt depth;
+model mass = trt depth trt*depth/ ddfm = satterthwait;
+random block*trt;
+/*this looks at differences between depths within each trt*/
+lsmeans depth*trt/pdiff slicediff = trt adjust = tukey;
+/*this looks at differences between trts within each depth*/
+lsmeans depth*trt/pdiff slicediff = depth adjust = tukey;
+run;
