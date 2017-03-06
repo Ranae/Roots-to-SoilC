@@ -45,8 +45,9 @@ trtmeans<-trtmeans[trtmeans$depth != "(all)",]
 trtmeans<-trtmeans[trtmeans$point != "(all)",]
 trtmeans<-trtmeans[,-8]
 
-cnsum <- within(cnsum, point <- ordered(point, levels = rev(sort(unique(point)))))
+#cnsum <- within(cnsum, point <- ordered(point, levels = rev(sort(unique(point)))))
 cnsum2 <- cnsum[cnsum$trt %in% c("P", "PF", "CC"),]
+cnsum2$point<-as.numeric(as.character(cnsum2$point))
 
 dodge <- position_dodge(width=.9)
 
@@ -75,7 +76,7 @@ theme_set(theme_bw())
 
 ##CN ratios over depths (profile), each year
 desert<-c("#E06100", "#24019B", "#83304C")
-e<-ggplot(data = cnsum2,aes(x = point,y = CN)) + 
+e<-ggplot(data = cnsum2,aes(x = as.numeric(point),y = CN)) + 
     geom_ribbon(aes(group = trt,ymin = CN - CNse,ymax = CN + CNse),alpha = 0.25) + 
     geom_line(aes(group = trt,linetype = trt,colour = trt),size = 1.5) + 
 	coord_flip() +
@@ -85,6 +86,7 @@ e<-ggplot(data = cnsum2,aes(x = point,y = CN)) +
                       labels = c("Maize", "Fertilized Prairie", "Prairie"))+
   scale_linetype_discrete(breaks=c("CC", "PF", "P"), 
                        labels = c("Maize", "Fertilized Prairie", "Prairie"))+
+  scale_x_reverse()+
     theme(#panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
           #panel.background = element_blank(),
