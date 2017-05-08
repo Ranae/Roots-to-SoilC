@@ -3,6 +3,8 @@ title: "Untitled"
 author: "Ranae Dietzel"
 date: "April 18, 2017"
 output: pdf_document
+header-includes:
+  - \usepackage{color}
 ---
 
 Anonymous Referee #1
@@ -18,7 +20,7 @@ treatments. This result is interesting and quite new from what I know. This sugg
 that deeper roots are dominated by transport root with highly sclerified tissues and
 poor absorptive proteins content compared to surface roots. Finally, they conclude that
 in moving from prairie to maize, a large, structural-tissue dominated root C pool with
-slow turnover, concentrated at shallow depths was replaced by a small, non-structuraltissue
+slow turnover, concentrated at shallow depths was replaced by a small, non-structural tissue
 dominated root C pool with fast turnover evenly distributed in the soil profile,
 suggesting that maize may allocate more root C input to the soil than prairies at deeper
 depths. This constitutes the strong portion of this manuscript.
@@ -64,43 +66,59 @@ I well understood your design, you studied soil root allocation on restored prai
 have maize cropping historical of >100 years. Therefore, would it not be more correct to
 talk about moving from maize to prairie. 
 
+\textcolor{blue}{I am referencing the historical shift from prairie to maize. I will change the wording for clarification.}
+
 P.1-L. 15. 'contribute' to what? To soil C stock?
 Please clarify. Alternatively, we could also talk about 'C allocation'. 
+\textcolor{blue}{Yes, soil C stock. I will clarify}
 
 P.1-L. 21. Please
 clarify what you mean by 'aboveground process'. Is really soil disturbance (tillage?) an
-aboveground process? 
+aboveground process?
+\textcolor{blue}{Will change 'aboveground processes' to 'soil management'.}
 
 P.1-L. 26-27. Is this definition really necessary here? I think it
-will be better placed in the Material and Methods section. 
+will be better placed in the Material and Methods section.
+\textcolor{blue}{I included it here as I go on to use the definition in the introduction.}
 
 P.2-L.5. Please insert the
 Weaver citation 
+\textcolor{blue}{Thanks for catching this, I will insert the citation.}
 
 P.2-L.17. Why did you used 'Carbon:N' though you used 'C:N' just before.
-
+\textcolor{blue}{I'm told not to start a sentence with an abbreviation.}
 
 P.2-L.19-21. I do not clearly see how your experimental design give you a 'unique
-perspective on characteristics of root inputs' Please clarify. It would also be useful to indicate
+perspective on characteristics of root inputs' Please clarify. 
+\textcolor{blue}{We expect many of the characteristics reported here to be less detectable in well-established prairies systems, but you are right that prairie reconstruction in not entirely unique. We will replace "unique perspective" to "new perspective".} 
+
+It would also be useful to indicate
 here the number of year since prairie restoration at the end of the study (5 years
 not?). 
+\textcolor{blue}{Yes, this will be added here.}
 
 P.2-L.26-27. I did not understand the point of your second scientific question
 before to read the last extion of your discussion. Please be not explicit and precise on
 your purpose. 
+\textcolor{blue}{Thanks for this comment. You illustrate that we need to change some aspects of the introduction to make it understandable for an international audience. For example, in this instance we will simply say "perennial prairie" instead of "historical" and "annual cropping systems" instead of "current systems".} 
 
 P.3-L.1-2. What about soil N concentration? This could be importabnt
+\textcolor{blue}{We do have total soi N data and will include it here.}
 
 
-P.3-L.1-2. How many replicates (blocks)? 4? This information is crucial! 
+P.3-L.1-2. How many replicates (blocks)? 4? This information is crucial!
+\textcolor{blue}{I'm sorry we did not include this, it will be added.}
+
 
 P.5-L.4-8. You
 used linear mixed models. Please state what factors are formulated as fixed or random
-effects in your models. 
+effects in your models.
+\textcolor{blue}{This information will be added.}
 
 P.5-L.15-23. Logistic model is used fit binary response variable.
 Therefore, I do not see the rationale to use Logistic model to fit root mass, which
 is a continuous variable. . . 
+\textcolor{blue}{
 
 P.5-L.19. It is not so clear to me what you mean by "root
 mass accumulation". It is the difference in root mass between two sampling dates? Or
