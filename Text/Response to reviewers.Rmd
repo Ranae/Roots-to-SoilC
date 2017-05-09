@@ -70,61 +70,75 @@ talk about moving from maize to prairie.
 
 P.1-L. 15. 'contribute' to what? To soil C stock?
 Please clarify. Alternatively, we could also talk about 'C allocation'. 
+
 \textcolor{blue}{Yes, soil C stock. I will clarify}
 
 P.1-L. 21. Please
 clarify what you mean by 'aboveground process'. Is really soil disturbance (tillage?) an
 aboveground process?
+
 \textcolor{blue}{Will change 'aboveground processes' to 'soil management'.}
 
 P.1-L. 26-27. Is this definition really necessary here? I think it
 will be better placed in the Material and Methods section.
+
 \textcolor{blue}{I included it here as I go on to use the definition in the introduction.}
 
 P.2-L.5. Please insert the
 Weaver citation 
+
 \textcolor{blue}{Thanks for catching this, I will insert the citation.}
 
 P.2-L.17. Why did you used 'Carbon:N' though you used 'C:N' just before.
+
 \textcolor{blue}{I'm told not to start a sentence with an abbreviation.}
 
 P.2-L.19-21. I do not clearly see how your experimental design give you a 'unique
 perspective on characteristics of root inputs' Please clarify. 
+
 \textcolor{blue}{We expect many of the characteristics reported here to be less detectable in well-established prairies systems, but you are right that prairie reconstruction in not entirely unique. We will replace "unique perspective" to "new perspective".} 
 
 It would also be useful to indicate
 here the number of year since prairie restoration at the end of the study (5 years
 not?). 
+
 \textcolor{blue}{Yes, this will be added here.}
 
 P.2-L.26-27. I did not understand the point of your second scientific question
 before to read the last extion of your discussion. Please be not explicit and precise on
 your purpose. 
+
 \textcolor{blue}{Thanks for this comment. You illustrate that we need to change some aspects of the introduction to make it understandable for an international audience. For example, in this instance we will simply say "perennial prairie" instead of "historical" and "annual cropping systems" instead of "current systems".} 
 
 P.3-L.1-2. What about soil N concentration? This could be importabnt
+
 \textcolor{blue}{We do have total soi N data and will include it here.}
 
 
 P.3-L.1-2. How many replicates (blocks)? 4? This information is crucial!
+
 \textcolor{blue}{I'm sorry we did not include this, it will be added.}
 
 
 P.5-L.4-8. You
 used linear mixed models. Please state what factors are formulated as fixed or random
 effects in your models.
+
 \textcolor{blue}{This information will be added.}
 
 P.5-L.15-23. Logistic model is used fit binary response variable.
 Therefore, I do not see the rationale to use Logistic model to fit root mass, which
 is a continuous variable. . . 
-\textcolor{blue}{
+
+\textcolor{blue}{We will add more details here. Logistic regression is used to fit binary response variables. We used a logistic function to fit the data and then statistically compared the parameters of each fit of the function as described in the book "Mixed Effect Models in S and S-plus", Pinheiro and Bates, 2000.}  
 
 P.5-L.19. It is not so clear to me what you mean by "root
 mass accumulation". It is the difference in root mass between two sampling dates? Or
 is it cumulative root growth? But you did not measure it between all sampling dates,
 right? Please clarify. By the way, it not so clear what was the initial root mass stock
 and distribution prior to experimental set-up. 
+
+\textcolor{blue}{"Root mass accumulation" refers to root mass gained. We did not measure it between all sampling dates, rather we used the model we fit to predict values during times we did not make measurements.}
 
 P.5-L.29-30. We calculated root turnover
 constant as k = root loss / root stock. This computation is quite uncommon. Hence, Gill
@@ -133,31 +147,49 @@ addition to be more standard method, I also found it clearer as root gains are d
 obtained with the ingrowth core method while your root loss computation use root mass
 accumulation, which was not very well defined. 
 
+\textcolor{blue}{We can easily replace "root loss" with "root gain" in our equation.}
+
 P.7-L.9. Throughout the manuscript,
 we heavily use the 'pool'. Though I found this term appropriate for distingue different
 component of the global soil C stock, I found the term 'stock' more suitable when talking
 about quantitative estimate. 
 
-P.6-L.6. There is no reference to Table 1 in the text. 
+\textcolor{blue}{We will change the text so that 'pool' is used only when discussing specific components of the global soil C stock.}
+
+P.6-L.6. There is no reference to Table 1 in the text.
+
+\textcolor{blue}{Our apologies, we will correct this.}
 
 P.11-12. There is no reference to most of your tables and figures in this portion of your result
 section. . . You really need to clearly use reference to it for justify what you state in the
-text. In its current state, I do feel really difficult to follow your text. 
+text. In its current state, I do feel really difficult to follow your text.
+
+\textcolor{blue}{We will add more references to make the text easier to follow.}
 
 P.10-Table 3. Is this really useful ? Figure 4 already provide this information. This table should be place in
 appendix. By the way, I found that there is quite too much table and figure in the article.
 
+\textcolor{blue}{We will be happy to move Table 3 to the appendix and consider removing or combining some of the figures.}
+
 
 P.11-L.15. What you mean by input? Is it your root mass accumulation? Please clarify.
+
+\textcolor{blue}{Root mass accumulation is root mass input - root mass loss. Input is how much root mass went into the soil. We will clarify this in the text.}
 
 
 P.12-L.6. What about soil N concentration and soil C:N ratio across soil depth and
 treatment? Isn't this information important is understand the root C:N profiles? 
 
+\textcolor{red}{While root C:N ratio increases with depth, soil C:N ratio decreases with depth}
+
 P.13-L7-8. 'a physical-transfer pathway whereby plant tissue is processed by soil microbes
 to its fullest extent, and then remains in the soil functionally inert'. Really? Cotrufo
 et al. (2015) actually talk about physical transfer of Particulate Organic Matter (POM)
-from litter to soil. POM is not functionally inert! P.13-L.11-19. 'root decomposition in
+from litter to soil. POM is not functionally inert! 
+
+\textcolor{blue}{
+
+P.13-L.11-19. 'root decomposition in
 our study would have resulted in a gradient of microbially-derived to physically-derived
 organic matter from the top of the soil profile downward' Then this is not consistent
 with evidence that the contribution of microbial- and not root-derived C increases with
