@@ -54,18 +54,25 @@ the disproportionally large stock of SOM relative to root C inputs in deep soil.
 
 \textcolor{blue}{Right! We find this inconsistency in patterns very interesting and a major motivation for the manuscript. Although the proposed relationship we describe between root C:N ratio and soil C profile development is not immediately intuitive, the combination of MEMS and dissolved organic carbon (C) transport leads to a very possible mechanism behind a disproportionally large stock of SOM relative to root C inputs.}   
 
-Further,
-Cotrufo et al. (2015) studied SOM formation over short-term scale whereas deep soil
-C is often hundreds to thousands year-old and highly microbialy processed. Fontaine
-et al. (2007) found that deep soil C mineralization is strongly limited by energetic
+Further,Cotrufo et al. (2015) studied SOM formation over short-term scale whereas deep soil
+C is often hundreds to thousands year-old and highly microbialy processed. 
+
+\textcolor{red}{What happens in the short-term is directly connected to what happens in the long term. The fact that deep soil C is highly microbially processed does not indicate where where the C originated.} 
+
+Fontaine et al. (2007) found that deep soil C mineralization is strongly limited by energetic
 constraints. This slow turnover together with the DOC input from surface to deep soil
 layer documented by Rumpel and Kögel-Knabner (2010) could more likely explain the
-disproportionally large stock of SOM relative root C input is found in deep soil. I also
-pointed several methodological issues detailed below. Finally, I fell that you did not
+disproportionally large stock of SOM relative root C input is found in deep soil. 
+
+\textcolor{blue}{Both of these factors, and many more mentioned in the manuscript, contribute to the disproportionally large stock of SOM relative to root C input found in deep soil, but do not fully explain it and do not incorporate the role of root C:N ratio. The transport of DOC is especially important in our proposed mechanism and we spend some time on how roots at shallow depths vs. deeper depths contribute to this DOC.}   
+
+I also pointed several methodological issues detailed below. Finally, I fell that you did not
 so much discussed how the root system of your different plant communities (maize vs.
 prairie) could explain the vertical C profile of your studied soil though this constitutes the
 strong part of your study to the linkage between root C input and the vertical distribution
 of SOM.
+
+\textcolor{red}{Thank you for the methodological questions. We did not spend a lot of time on discussion of}  
 
 Taken together, I think this manuscript will need important revisions to be acceptable
 for publication, especially by avoiding tricky extrapolation and misinterpretation and by
