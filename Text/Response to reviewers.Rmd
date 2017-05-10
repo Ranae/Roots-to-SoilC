@@ -187,7 +187,7 @@ to its fullest extent, and then remains in the soil functionally inert'. Really?
 et al. (2015) actually talk about physical transfer of Particulate Organic Matter (POM)
 from litter to soil. POM is not functionally inert! 
 
-\textcolor{blue}{
+\textcolor{blue}{We will change this to better reflect Cotrufo's original language and refer instead to the "inherent chemical recalcitrance" of organic matter resulting from the physical-transfer pathway.} 
 
 P.13-L.11-19. 'root decomposition in
 our study would have resulted in a gradient of microbially-derived to physically-derived
@@ -195,11 +195,14 @@ organic matter from the top of the soil profile downward' Then this is not consi
 with evidence that the contribution of microbial- and not root-derived C increases with
 depth (Rumpel and Kogel-Knabner, 2011) in contrast with what you stated 
 
-L.15-16. I assume that DOC derived from soil surface can be mobile and move down the proC4
-file but a large portion can be stabilized in the surface and at least the SOM derived
+\textcolor{blue}{The sentence following this one in the manuscript is very important. The microbially-derived organic matter would be mobile and transported to deeper depths, contributing to the relatively immobile pool of physically-derived organic matter. This is very consistent with Rumpel and Kogel-Knaber (2011), as we evenutally conclude.} 
+
+L.15-16. I assume that DOC derived from soil surface can be mobile and move down the profile but a large portion can be stabilized in the surface and at least the SOM derived
 from deep root with high C:N ratio should be less microbial-derived given what you
 state. This point should be clarify. Moreover, the notion physically-derived SOM does
-not make sense, see my previous comment. 
+not make sense, see my previous comment.
+
+\textcolor{blue}{Yes, a large portion of DOC can be stabilized in the soil surface depending on the soil type.   
 
 P.13-L.12-14. 'Soil organic matter at the soil surface would be vulnerable to transport to greater depth as dissolved organic C
 whereas physically-transferred soil organic matter at depth would be relatively immobile'.
