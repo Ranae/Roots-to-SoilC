@@ -25,15 +25,24 @@ dominated root C pool with fast turnover evenly distributed in the soil profile,
 suggesting that maize may allocate more root C input to the soil than prairies at deeper
 depths. This constitutes the strong portion of this manuscript.
 
+\textcolor{blue}{Thank you, we too were excited to quantify differences in prairie and maize root allocation and find root C:N ratios increase with depth.} 
+
 Based on the conceptual framework and the empirical results of the study of Cotrufo et
 al. (2015) about the formation of SOM, they also argue that their pattern of increasing
 root C:N ratio with depth could explain why an disproportionally large stock of SOM
 relative to root C inputs is found in deep soil. First, I found it quite tricky to conclude
-about the driver of such a global scale pattern from data of a case study like this.
+about the driver of such a global scale pattern from data of a case study like this.  
+
+\textcolor{blue}{Yes, since this is only one study, we avoid making any strong conclusions, but do suggest that root C:N ratio plays a role in development of the soil profile. Finding increases in root C:N ratios with depth is significant on its own, but we feel it is very important to put this finding in the context of larger scientific questions.}
+
 Beyond that, I am not convinced by this interpretation and I found their argumentation
 about this statement quite weak for several reasons related to logical contradiction
 and some misunderstanding about the work of Cotrufo as discussed into more detail
-below. If I consider these two paths of SOM formation and your results together, I
+below. 
+
+\textcolor{blue}{We feel we can do a better job communicating our proposed mechanism and address these details below.}
+
+If I consider these two paths of SOM formation and your results together, I
 would consider that shallow root of high litter quality would supply high input of DOC
 that can be efficiently processed by soil microorganisms (high Carbon Use Efficiency
 [CUE]) and supply larger quantity of microbial by-products that can be then stabilized
@@ -41,7 +50,11 @@ in soil microagregates by mineral-binding, thus leading to higher C sequestratio
 contrast, the deep root of poor quality (higher proportion of POM) will be least efficiently
 processed, thus leading to higher C lost by mineralization relative to SOM formation
 and ultimately lower C sequestration. This is thus not consistent with the pattern of
-the disproportionally large stock of SOM relative to root C inputs in deep soil. Further,
+the disproportionally large stock of SOM relative to root C inputs in deep soil.
+
+\textcolor{blue}{Right! We find this inconsistency in patterns very interesting and a major motivation for the manuscript. Although the proposed relationship we describe between root C:N ratio and soil C profile development is not immediately intuitive, the combination of MEMS and dissolved organic carbon (C) transport leads to a very possible mechanism behind a disproportionally large stock of SOM relative to root C inputs.}   
+
+Further,
 Cotrufo et al. (2015) studied SOM formation over short-term scale whereas deep soil
 C is often hundreds to thousands year-old and highly microbialy processed. Fontaine
 et al. (2007) found that deep soil C mineralization is strongly limited by energetic
@@ -202,18 +215,22 @@ from deep root with high C:N ratio should be less microbial-derived given what y
 state. This point should be clarify. Moreover, the notion physically-derived SOM does
 not make sense, see my previous comment.
 
-\textcolor{blue}{Yes, a large portion of DOC can be stabilized in the soil surface depending on the soil type.   
+\textcolor{red}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8%, indicating a reduced capacity for additional C stabilization.}      
 
 P.13-L.12-14. 'Soil organic matter at the soil surface would be vulnerable to transport to greater depth as dissolved organic C
 whereas physically-transferred soil organic matter at depth would be relatively immobile'.
 If you read carefully Cotrufo (2015), she stated that DOC derived from litter is
 preceded by soil microorganisms and the microbial by-products are then stabilized in
 soil microagregates by mineral-binding. This mineral-stabilized SOM is thus actually
-less mobile than POM, in contrast with what you stated. 
+less mobile than POM, in contrast with what you stated.
+
+\textcolor{blue}{Microbial by-products are very mobile until they are stabilized. When and where they are stabilized depends on the soil conditions. In the mechanism we propose, microbial by-products reach the deeper profile and are stabilized there. This is consistent with findings that microbial-derived SOM increases with depth.}
 
 P.13-L.16-19. Exsudates are highly labile compounds that are very quickly preceded by soil microorganisms. Once
 metabolized, they are much less mobile. Therefore, they probably represent a minor
-fraction DOC moving down the profile and that could form deep SOC. 
+fraction DOC moving down the profile and that could form deep SOC.
+
+\textcolor{red}{If microbial by-products are not very mobile, does DOC consist of only suspended fine POM?} 
 
 P.13-L.27-29 'By the sixth year of reconstructed prairie establishment, root C pool equilibrium was
 reached and prairies began making substantial annual contributions to the soil organic
@@ -222,10 +239,16 @@ soil is unknown' You have information on root litter decomposition and soil orga
 turnover, so cannot state anything about SOM formation or stock. All you can saw
 this you likely have higher root litter input that could eventually increase SOM stock.
 
+\textcolor{blue}{You are absolutely right. This will be fixed by changing 'contributions' to 'inputs'.}
+
 P.13-L.35-37. Probably, but this is quite speculative. . . 
+
+\textcolor{red}{It is indeed speculative, but the most reasonable answer given the evidence available.} 
 
 P.14-L.10. 'contributed more C'
 This is unclear. 
+
+\textcolor{blue}{Will change to 'had greater C inputs'.}
 
 References Cotrufo, M. F., Soong, J. L., Horton, A. J., Campbell, ??
 E. E., Haddix, M. L., Wall, D. H. & Parton, W. J. (2015) Formation of soil organic matter
