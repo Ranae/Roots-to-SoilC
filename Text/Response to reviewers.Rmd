@@ -280,6 +280,8 @@ would like to highlight that the depth of scientific knowledge and technical und
 of these reviewers represents that of master students. We enjoyed discussing the
 manuscript in the seminar, and hope that our comments will be helpful for the authors.*
 
+\textcolor{blue}{That is so great that you discussed our paper as a group! What a great exercise and these comments are just the sort of thing we hoped would happen when submitting a paper to Soil. Thanks a lot for your comments. Hearing from many people really makes obvious which portions of the paper are difficult to understand and where the most improvement is needed.}
+
 Dietzel et al. start with the fundamental statement, that soil organic carbon and root
 mass are disproportionately distributed in soils, supposing that root mass has a direct
 influence on soil carbon pool. As a matter of fact, in a depth below 20cm half of all soil
@@ -288,6 +290,8 @@ answer to the question, why there is such a large difference between the two C p
 Dietzel et al. mention that temperature, moisture, O2, soil texture and soil C values are
 part of the explanation of this discrepancy. Still, the C:N ratio as part of it has always
 been neglected in previous studies.
+
+\textcolor{blue}{Indeed, decreases in root C:N ratio with depth has been an unknown factor.}
 
 The paper therefore specifically concentrates on a more detailed look at the properties
 of C pools. For this purpose the authors examined soil C and root C pools in three
@@ -305,27 +309,48 @@ sufficiently important that they result in a greater maize C contributions to so
 matter than prairie C below 20 cm.
 
 Objective 1 (root quality and quantity with depth) was discussed in detail in the
-manuscript. During the discussion in the classroom, however, it became clear that
+manuscript. 
+
+During the discussion in the classroom, however, it became clear that
 objective 2 and the related discussion confused all of us. We did not understand i) why
-the "historical belowground ecosystem" is important and ii) how objective 2 relates to
+the "historical belowground ecosystem" is important 
+
+\textcolor{blue}{Reviewer #1 also brought this to our attention. This sentence needs to be reworded to be more explicit for a broader audience. The 'historical belowground ecosystem' is the prairie systems under which the soils formed.} 
+
+and ii) how objective 2 relates to
 the presented results. The question if these soils will continue to change is rhetoric
-(soil always continue to develop) and very unspecific. The corresponding discussion
+(soil always continue to develop) and very unspecific. 
+
+\textcolor{blue}{Yes, this part of the sentence will also be reworded. We did not mean 'if', but 'how' soils will continue to change under annual cropping systems compared to reconstructed perennial systems.}
+
+The corresponding discussion
 section (4.3) is very short and speculative. Are root "turnover" (with a lifetime of a
 few years) and soil organic carbon turnover (decades to centuries) somehow related?
+
+\textcolor{blue}{They are definitely related. Where does soil organic carbon come from? As roots cease to be roots, they turn into CO2 or organic matter, influencing soil organic carbon turnover on the scale of days to centuries, even thousands of years for soils that have been occupied by roots for thousands of years.} 
+
 Probably they are not. Coincidence is not causation. We wondered if objective 2 and
 section 4.3 are needed at all. If you think they are, please elaborate this part of the
 manuscript.
+
+\textcolor{blue}{Yes, we will certainly elaborate on this.}
 
 Detailed comments: 
 We did not fully understand the link between C:N and root depth.
 Do you mean that C:N ratios increase with depth depending on species or on individual
 plants?
 
+\textcolor{blue}{As we move deeper into the soil, root C:N ratios increase for all plants in this study.} 
+
 P. 3, line 26: what does "sampling by replicate block from 31 October-25 November
 2008" mean? Did you sample repeatedly? Explanation of "replicate block"-approach
 needed.
 
+\textcolor{blue}{Yes, this is not clear and we will add more details.}
+
 P. 4, line 11/12: is there a difference between root measurements and root data?
+
+\textcolor{blue}{Yes, there is. We should not have used them interchangeably here. Thanks for catching that.}
 
 P. 4, line 24/25: why different storage? Further explanation desired.
 
