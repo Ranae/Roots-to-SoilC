@@ -2,7 +2,7 @@
 library(nlme)
 
 ## Read in the data
-rut <- read.csv('Data/rootmeansv2.csv', header=TRUE)
+rut <- read.csv('../Data/rootmeansv2.csv', header=TRUE)
 
 rut$trt<-as.character(rut$trt)
 rut$trt[rut$plot %in% c("11", "33", "26", "44")]<-"SC"

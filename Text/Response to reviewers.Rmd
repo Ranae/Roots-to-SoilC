@@ -354,35 +354,63 @@ P. 4, line 11/12: is there a difference between root measurements and root data?
 
 P. 4, line 24/25: why different storage? Further explanation desired.
 
+\textcolor{blue}{We explain that storage was different because soil from the first year was part of an incubation experiment.}
+
 P. 5, line 28: why the period between April 1st and November 30th to calculate the average
-root mass accumulation? Are these official dates? Further explanation needed.
+root mass accumulation? Are these official dates? Further explanation needed.  
+
+\textcolor{blue}{These dates are the approximate window for plant growth in our region. We will include that information in the manuscript.}
 
 Table p. 10: unclear -> explanation of upper/lower case letters and meaning of those
 letters is missing; it could be part of the description of the table
 
-Explanation pro glimmix on page 5/14 but not in table description. P. 13, line 3: increase
-in root pool C:N ratio has not been reported previously in the literature:
+\textcolor{blue}{This information is in the caption. Perhaps it did not come through with the format you were looking at.}
+
+Explanation pro glimmix on page 5/14 but not in table description.
+
+\textcolor{blue}{Not sure what you are looking for here.}
+
+P. 13, line 3: increase in root pool C:N ratio has not been reported previously in the literature:
 We would appreciate some information about previous research which focused on a
-related topic
+related topic  
+
+\textcolor{blue}{We literally could not find any literature related to root pool C:N ratio.}
 
 P. 14, line 3/4: the pattern of distribution of what? Do you mean the vertical distribution
 of roots? What is place in this context?
 
+\textcolor{blue}{Pattern of distribution of roots. We will add this to the text.}
+
 P. 14, line 30-32: For us, this sentence is very long and difficult to understand. No significant
 changes in soil C (changes in quantity or stocks?) at any depth but differences
-in quantity? "implementation of annual cropping systems": Do you refer to line 19?
+in quantity? 
+
+\textcolor{blue}{We will split this sentence up into segments that are easier to understand. No changes in soil C despite changes in root quantity.}
+
+"implementation of annual cropping systems": Do you refer to line 19?
 Experimental location was a site of cultivation under annual crops for over 100 years.
+
+\textcolor{blue}{These soils were dominated by prairies for ~10,000 years, so the shift to annual cropping systems 100 years ago is still relatively recent in terms of soil development. This information is important for us to add to the text.}
+
 Remarks concerning formal structures (typos, figures etc.): 
 
 P. 3, line 2: typo: 11 mg kg-1
 
+\textcolor{blue}{Thanks.}
+
 Figure p. 6: why not making a title with total C, root C maize, etc. instead of letters
-a,b,c -> would be more clear and consistent with the following figures
+a,b,c -> would be more clear and consistent with the following figures  
+
+\textcolor{blue}{Yes, we can change this.}
 
 Figures p.8 + 9: legend can be improved -> no units -> unclear & colors are not suitable
-for black/white printing
+for black/white printing  
 
-P. 13, line 36: typo: this
+\textcolor{blue}{We will add units to the legend and we used to different linetypes for different treatments in black and white printing, but see now that is not obvious.}
+
+P. 13, line 36: typo: this  
+
+\textcolor{blue}{Thanks.}
 
 ###########################################################################################
 Anonymous Referee #2
