@@ -9,9 +9,9 @@ days<-rut%>%
                       ifelse((year == 2008 & block == 2), 323,
                              ifelse((year == 2008 & block == 3), 308,
                                     ifelse((year == 2008 & block == 4), 329,
-                      ifelse((year == 2009 $ block == 1), 313,
+                      ifelse((year == 2009 & block == 1), 313,
                                ifelse((year == 2009 & block == 2), 314,
-                                      ifeslse((year == 2009 & block %in% c(3,4)), 315,
+                                      ifelse((year == 2009 & block %in% c(3,4)), 315,
                       ifelse((year == 2010 & block == 1), 298,
                              ifelse((year == 2010 & block %in% c(2,3)), 300,
                                     ifelse((year == 2010 & block == 4), 301,
@@ -25,7 +25,8 @@ days<-rut%>%
                                     )))))))))))))))))%>%
   filter(trt %in% c("CC"))
 
-mod<-lm(days$mass ~ days$day)
+fit<-group_by(days, depth)
+mod<-lm(fit$mass ~ fit$day)
 
   ggplot(days, aes(x=day, y=mass, color = as.factor(year)))+
   geom_point()+
