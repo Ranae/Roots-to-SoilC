@@ -2,7 +2,9 @@
 title: "Untitled"
 author: "Ranae Dietzel"
 date: "April 18, 2017"
-output: pdf_document
+output: 
+   pdf_document:
+     keep_tex: true
 header-includes:
   - \usepackage{color}
 ---
@@ -222,7 +224,7 @@ from deep root with high C:N ratio should be less microbial-derived given what y
 state. This point should be clarify. Moreover, the notion physically-derived SOM does
 not make sense, see my previous comment.
 
-\textcolor{red}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8%, indicating a reduced capacity for additional C stabilization.}      
+\textcolor{red}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8 percent, indicating a reduced capacity for additional C stabilization.}      
 
 P.13-L.12-14. 'Soil organic matter at the soil surface would be vulnerable to transport to greater depth as dissolved organic C
 whereas physically-transferred soil organic matter at depth would be relatively immobile'.
@@ -315,7 +317,7 @@ During the discussion in the classroom, however, it became clear that
 objective 2 and the related discussion confused all of us. We did not understand i) why
 the "historical belowground ecosystem" is important 
 
-\textcolor{blue}{Reviewer #1 also brought this to our attention. This sentence needs to be reworded to be more explicit for a broader audience. The 'historical belowground ecosystem' is the prairie systems under which the soils formed.} 
+\textcolor{blue}{Reviewer 1 also brought this to our attention. This sentence needs to be reworded to be more explicit for a broader audience. The 'historical belowground ecosystem' is the prairie systems under which the soils formed.} 
 
 and ii) how objective 2 relates to
 the presented results. The question if these soils will continue to change is rhetoric
@@ -439,20 +441,20 @@ in 1974 (Agron. J. 66: 341-344) and several studies that have followed. Actually
 Mengel and Barber (1974) state that root length and fresh weight decrease rapidly after
 maize has reached the reproductive stage. Here, Dietzel et al. themselves state
 in the abstract about maize roots that they are "non-structural-tissue dominated root C
-pool with fast turnover". They also indicate that the site was apparently under maizesoybean
-rotation prior to starting the experiment, so why was there no accumulated
+pool with fast turnover". They also indicate that the site was apparently under maize soybean rotation prior to starting the experiment, so why was there no accumulated
 maize root biomass at the start of the experiment (if the root accumulation theory is
 correct)? Unfortunately, in the present study the roots were not sampled at the same
 time each year (from early October to early November), and the accumulation of maize
-roots the last two years also corresponds to the 2 earliest sampling. A possible explanation
-is that the roots actually decomposed quickly in the field and that by sampling a
-month earlier by the end of the six-year period a greater number of non-decomposed
-roots were retrieved. Effects of inter-annual climatic variability on root growth is another
-potentially contributing effect. There are three implications from this: 1) apparent
-maize-root accumulation in the field over 6 years is probably an artefact, 2) the pool
-and rate modelling of Fig 3 and 4 is not justified (it did not bring much to the paper
+roots the last two years also corresponds to the 2 earliest sampling. A possible explanation is that the roots actually decomposed quickly in the field and that by sampling a month earlier by the end of the six-year period a greater number of non-decomposed
+roots were retrieved. Effects of inter-annual climatic variability on root growth is another potentially contributing effect. There are three implications from this: 1) apparent maize-root accumulation in the field over 6 years is probably an artefact, 2) the pool and rate modelling of Fig 3 and 4 is not justified (it did not bring much to the paper
 anyway), 3) the paper should have included a much more throughout review of the
 literature about maize-root dynamics in field soils.
+
+\textcolor{blue}{Thank you very much for bringing this to our attention. The possibility of such as artifact led us to additional analysis of our data. During this analysis, we found that the dates included in the methods section were not correct. We are very sorry for this mistake. Please find below a figure that illustrates that time of sampling was most likely not a contributing factor in the accumulation of root mass.}  
+
+\textcolor{blue}{You bring up some other useful points here. We can certainly include more papers on the decomposition of maize roots. Our values for maize biomass taken after maize harvest are typically ~10 percent of maize root values taken at maturity. This is in line with studies that have found that maize roots decompose rapidly. However, decomposition rate is an exponential function, with rapid decomposition occurring early and a slower rate of decomposition occurring later. Several months after maize maturity we are most likely sampling during a period of slow organic matter decomposition.}  
+
+\textcolor{red}{We also questioned the lack of accumulated root mass from years previous to our experiment. We were careful to collect maize root samples 20 cm from our maize row and to plant our rows within 2-3 cm of the previous year's row. We assumed that the cropping legacy would have left a more homogenous distribution of roots than the one we implemented.}  
 
 2) The maize-root C profile is presented 3 times in the paper: 1) Fig 1 b, 2) Fig 2, and
 3) Fig. A3. The 3 figures are in the same units (Mg ha-1), but I could not reconcile
