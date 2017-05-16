@@ -483,8 +483,11 @@ coherent evaluation of the C input in the context of published studies.
 somewhat contradictory. The present paper contains no significant result to link root
 biomass profiles to soil C profiles. While it is OK to briefly elaborate about possible
 implication of a higher root C/N ratio with depth, this should not be the main part of
-the discussion, which should instead focus on actual significant results. In addition, I
-could not reconcile the two ideas presented here about the effect of root C/N ratio on
+the discussion, which should instead focus on actual significant results. 
+
+\textcolor{red}{The implications for C storage presented in this paper are partly hypothetical, but are complex and novel enough to warrant extensive discussion. The mystery of the disproportionally large stock of SOM relative to root C input found in deep soil has been ongoing for the last 100 years. How long do we have to wait for significant results?}  
+
+In addition, I could not reconcile the two ideas presented here about the effect of root C/N ratio on
 C storage in soils. On the hand, the authors argue that a lower C/N ratio for maize root
 favours C storage in soil as compared to prairie roots (p14, line 11-12). On the other
 hand, they also argue that an increasing C/N ratio of roots with depth in the soil profile
