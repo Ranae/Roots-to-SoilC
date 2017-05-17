@@ -494,12 +494,23 @@ hand, they also argue that an increasing C/N ratio of roots with depth in the so
 also favours C storage (e.g. p1, line 10-12). The potential attempt to reconcile these
 two contradictory effects of root C/N ratio on soil C was unconvincing (p 14).
 
+\textcolor{blue}{We will reword P1, line 10-12 - "In all treatments we found 10 that root C:N ratios increased with depth, which may help explain why an unexpectedly large proportion of soil organic C is found below 20 cm." It is meant to suggest that increaseing C:N ratios with depth play a role in an unexpectedly large proportion of soil organic C found below 20 cm, not that the increase in C:N ratio directly contributes C storage. The relationship between C:N ratios and C storage is not necessarily intuitive, as we later describe in the text.}
+
 In conclusion, Dietzel et al. have collected an impressive data set on maize and prairie
 roots following maize-soybean rotation. The dataset appears to suffer from some artefacts,
 but root studies are difficult and shortcomings could have been acknowledged.
+
+\textcolor{blue}{Thank you.}
+
 The data themselves are neither clearly presented nor sufficiently discussed in light
 of the literature. A main finding is largely ignored, i.e. the dramatic reduction of root
-biomass by fertilization in prairie systems. By contrast, the authors focus on an uncertain
+biomass by fertilization in prairie systems. 
+
+\textcolor{blue}{Indeed, apart from the figures, we did include only three sentences on this finding. The effect of N fertilization on perennial root biomass is well-known (citations) and we did not consider this plant response to be particularly important to a soils audience.} 
+
+By contrast, the authors focus on an uncertain
 modelling and non-verifiable considerations about the effect of root C/N ratio
 on soil C. A focus on significant results and discussion of these results in light of the
 literature would have better served this study
+
+\textcolor{blue}{While modelling is always uncertain, the fits of the models we used were very good and we stand behind the conclusions drawn from this effort. The effect of root C:N ratio on soil C may never be verifiable, but root C:N ratio plays some role in the development of the soil C profile. This manuscript   
