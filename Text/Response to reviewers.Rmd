@@ -462,14 +462,18 @@ literature about maize-root dynamics in field soils.
 3) Fig. A3. The 3 figures are in the same units (Mg ha-1), but I could not reconcile
 the data between them. The 2013 data of fig. 1 b (with largest root accumulation in
 the top soil) do not seem to correspond to the 2013 data of figure A3, which seems to
-show highest maize-root biomass in the deeper soil. In addition, the maize root profile
+show highest maize-root biomass in the deeper soil. 
+
+\textcolor{blue}{You are correct in not being able to reconcile the figures in the paper (1b and 2) with the figures in the appendix (A3) because the depth increments are not the same. Figure A3 shows the actual data, mass collected at 0-5, 5-15, 15-30, 30-60, and 60-100 cm depths. The deepest depth is 40 cm, resulting in high values relative to 5-15 cm, only 10 cm. We used the values taken in these depth increments to break distribution into 5 cm increments, as described in P6, L 3-4. This gave a more accurate depiction of the distribution of both roots and organic C through the soil profile.}
+
+In addition, the maize root profile
 appears more even in Fig.2 than in Fig. 1 b, while it should be exactly the opposite (e.g.
 the 5-10 cm should have about half of the 0-5 cm in fig 2, if extrapolated from fig 1).
 Or are the two figures exactly the same? But why figure 2 then? The 3 figures should
 have been reconciled and presented as one main figure in logical units, and then the
 results compared to the literature.
 
-\textcolor{red}{Come back here.}
+\textcolor{blue}{Fig. 1b and Fig.2 are drawn from the same dataframe. Fig. 1 shows distribution patterns that, as you point out, are not visible in Fig. 2, especially for maize. We use Fig. 1 to discuss root and soil C distribution in the soil profile. Figure 2 shows absolute differences in root pool mass among treatments, not visible in Fig. 1. It is used to point out and discuss these basic differences.}     
 
 3) Data from the root regrowth cores are not clearly presented, but used for a direct
 extrapolation of a root turnover rate in the top 30 cm. Summary data (without statistics)
@@ -513,4 +517,4 @@ modelling and non-verifiable considerations about the effect of root C/N ratio
 on soil C. A focus on significant results and discussion of these results in light of the
 literature would have better served this study
 
-\textcolor{blue}{While modelling is always uncertain, the fits of the models we used were very good and we stand behind the conclusions drawn from this effort. The effect of root C:N ratio on soil C may never be verifiable, but root C:N ratio plays some role in the development of the soil C profile. This manuscript   
+\textcolor{blue}{While modelling is always uncertain, the fits of the models we used were very good and we stand behind the conclusions drawn from this effort. The effect of root C:N ratio on soil C may never be verifiable because it is a centuries-long process that is difficult to measure, but root C:N ratio plays some role in the development of the soil C profile. This manuscript is the very first to question this role and work with existing data to propose a mechanism by which root C:N ratio contributes to soil C profile development. It is our hope that by focusing our paper on root C:N ratios and current soil C profiles, we are inspiring and supporting future studies that will examine this important relationship more closely. Merely commenting on this possible relationship in a manuscript focused on a comparison of maize and prairie roots would not reach the intended audience or provide direction for related experiments.}
