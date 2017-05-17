@@ -74,7 +74,7 @@ prairie) could explain the vertical C profile of your studied soil though this c
 strong part of your study to the linkage between root C input and the vertical distribution
 of SOM.
 
-\textcolor{red}{Thank you for the methodological questions. We did not spend a lot of time on discussion of}  
+\textcolor{blue}{Thank you for the methodological questions. We would have liked to spend more discussion on the root systems of maize vs. prairie, but felt that without measurements of the original soil C profile, discussion specific to change created by annual cropping systems would be challenged. However, we can strengthen this component in response to your comment.}    
 
 Taken together, I think this manuscript will need important revisions to be acceptable
 for publication, especially by avoiding tricky extrapolation and misinterpretation and by
@@ -202,7 +202,7 @@ P.11-L.15. What you mean by input? Is it your root mass accumulation? Please cla
 P.12-L.6. What about soil N concentration and soil C:N ratio across soil depth and
 treatment? Isn't this information important is understand the root C:N profiles? 
 
-\textcolor{red}{While root C:N ratio increases with depth, soil C:N ratio decreases with depth}
+\textcolor{blue}{Yes, this information is important and we can include total (organic + inorganic) N values for this soil. While root C:N ratio increases with depth, soil C:N ratio decreases with depth, and it may be useful to discuss this relationship.}
 
 P.13-L7-8. 'a physical-transfer pathway whereby plant tissue is processed by soil microbes
 to its fullest extent, and then remains in the soil functionally inert'. Really? Cotrufo
@@ -224,7 +224,7 @@ from deep root with high C:N ratio should be less microbial-derived given what y
 state. This point should be clarify. Moreover, the notion physically-derived SOM does
 not make sense, see my previous comment.
 
-\textcolor{red}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8 percent, indicating a reduced capacity for additional C stabilization.}      
+\textcolor{red}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8 percent, indicating a reduced capacity for additional C stabilization. In this environment, microbial by-products are likely to be part of the soil solution and }      
 
 P.13-L.12-14. 'Soil organic matter at the soil surface would be vulnerable to transport to greater depth as dissolved organic C
 whereas physically-transferred soil organic matter at depth would be relatively immobile'.
@@ -473,7 +473,7 @@ Or are the two figures exactly the same? But why figure 2 then? The 3 figures sh
 have been reconciled and presented as one main figure in logical units, and then the
 results compared to the literature.
 
-\textcolor{blue}{Fig. 1b and Fig.2 are drawn from the same dataframe. Fig. 1 shows distribution patterns that, as you point out, are not visible in Fig. 2, especially for maize. We use Fig. 1 to discuss root and soil C distribution in the soil profile. Figure 2 shows absolute differences in root pool mass among treatments, not visible in Fig. 1. It is used to point out and discuss these basic differences.}     
+\textcolor{blue}{Fig. 1b and Fig.2 are drawn from the same dataframe. Fig. 1 shows distribution patterns that, as you point out, are not visible in Fig. 2, especially for maize. We use Fig. 1 to discuss root and soil C distribution in the soil profile. Figure 2 shows absolute differences in root pool mass among treatments, not visible in Fig. 1. Fig. 2 is used to point out and discuss these basic differences.}     
 
 3) Data from the root regrowth cores are not clearly presented, but used for a direct
 extrapolation of a root turnover rate in the top 30 cm. Summary data (without statistics)
@@ -481,7 +481,7 @@ are presented in g m-2 in Table 4, making it difficult to compare to the root po
 presented in Mg ha-1. The maize root productivity appears low and I am missing a
 coherent evaluation of the C input in the context of published studies.
 
-\textcolor{red}{Sorry these data are not clear, we will improve this in the paper as well as change the units to correspond with other reported units. The maize root productivity is low because samples were taken 3-4 months after maize maturity.} 
+\textcolor{red}{Sorry these data are not clear, we will improve this in the paper as well as change the units to correspond with other reported units. The maize root productivity is low because samples were taken 3-4 months after maize maturity, which we will also highlight.} 
 
 4) The implications for C storage presented in this paper are largely hypothetical and
 somewhat contradictory. The present paper contains no significant result to link root
