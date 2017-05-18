@@ -1,7 +1,5 @@
 ---
-title: "Untitled"
-author: "Ranae Dietzel"
-date: "April 18, 2017"
+title: "A deeper look at the relationship between root carbon pools and the vertical distribution of the soil carbon pool: response to reviewers"
 output: 
    pdf_document:
      keep_tex: true
@@ -59,7 +57,7 @@ the disproportionally large stock of SOM relative to root C inputs in deep soil.
 Further,Cotrufo et al. (2015) studied SOM formation over short-term scale whereas deep soil
 C is often hundreds to thousands year-old and highly microbialy processed. 
 
-\textcolor{blue}{Yes, Cortrufo et al. has focused on short-term scales and their conceptual model is still hypothetical, however, what happens in the short-term is directly connected to what happens in the long term. The fact that deep soil C is highly microbially processed does not indicate where where the C originated.} 
+\textcolor{blue}{Yes, Cortrufo et al. have focused on short-term scales and their conceptual model is still hypothetical, however, what happens in the short-term is directly connected to what happens in the long term. The fact that deep soil C is highly microbially processed does not indicate where where the C originated.} 
 
 Fontaine et al. (2007) found that deep soil C mineralization is strongly limited by energetic
 constraints. This slow turnover together with the DOC input from surface to deep soil
@@ -224,7 +222,7 @@ from deep root with high C:N ratio should be less microbial-derived given what y
 state. This point should be clarify. Moreover, the notion physically-derived SOM does
 not make sense, see my previous comment.
 
-\textcolor{blue}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8 percent, indicating a reduced capacity for additional C stabilization. In this environment, microbial by-products are likely to be part of the soil solution and easily transported to deeper depths with greater capacity for C stabilization. We will make this clearer in the manuscript.}      
+\textcolor{blue}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. We will add a reference to Castellano (2015) to support this idea. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8 percent, indicating a reduced capacity for additional C stabilization. In this environment, microbial by-products are likely to be part of the soil solution and easily transported to deeper depths with greater capacity for C stabilization. We will make this clearer in the manuscript.}      
 
 P.13-L.12-14. 'Soil organic matter at the soil surface would be vulnerable to transport to greater depth as dissolved organic C
 whereas physically-transferred soil organic matter at depth would be relatively immobile'.
@@ -273,6 +271,8 @@ ecosystems. New Phytologist, 147, 13-31.
 Rumpel, C. & Kögel-Knabner, I. (2010)
 Deep soil organic matter a key but poorly understood component of terrestrial C 
 cycle. Plant and Soil, 338, 143-158. 
+
+\textcolor{blue}{Castellano, M. J., Mueller, K. E., Olk, D. C., Sawyer, J. E. and Six, J.: Integrating plant litter quality, soil organic matter stabilization, and the carbon saturation concept, Global Change Biology, 21(9), 3200-3209, doi:10.1111/gcb.12982, 2015.}
 
 ______________________________________________________________________________________________
 
@@ -423,7 +423,7 @@ The data themselves are neither clearly presented nor sufficiently discussed in 
 of the literature. A main finding is largely ignored, i.e. the dramatic reduction of root
 biomass by fertilization in prairie systems. 
 
-\textcolor{blue}{Indeed, apart from the figures, we did include only three sentences on this finding. The effect of N fertilization on perennial root biomass is well-known (citations) and we did not consider this plant response to be particularly important to a soils audience.} 
+\textcolor{blue}{Indeed, apart from the figures, we did include only three sentences on this finding. The effect of N fertilization on perennial root biomass is well-known (Troughton 1960, Thornley 1972, Gregory 2007) and we did not consider this plant response to be particularly important to a soils audience.} 
 
 By contrast, the authors focus on an uncertain
 modelling and non-verifiable considerations about the effect of root C/N ratio
@@ -432,6 +432,10 @@ literature would have better served this study
 
 \textcolor{blue}{While modelling is always uncertain, the fits of the models we used were very good and we stand behind the conclusions drawn from this effort. The effect of root C:N ratio on soil C may never be verifiable because it is a centuries-long process that is difficult to measure, but root C:N ratio plays some role in the development of the soil C profile. This manuscript is the very first to question this role and work with existing data to propose a mechanism by which root C:N ratio contributes to soil C profile development. It is our hope that by focusing our paper on root C:N ratios and current soil C profiles, we are inspiring and supporting future studies that will examine this important relationship more closely. Merely commenting on this possible relationship in a manuscript focused on a comparison of maize and prairie roots would not reach the intended audience or provide direction for related experiments.}
 
+\textcolor{blue}{Gregory, P.: Plants Roots: Growth, Activity and Interaction with Soils, in Plant, Roots and the Soil, pp. 5-7, Blackwell Publishing Ltd., 2007.}  
+\textcolor{blue}{Thornley, J. H. M.: A balanced quantitative model for root: shoot ratios in vegetative plants, Annals of Botany, 36(145), 431-441, 1972.}
+\textcolor{blue}{Troughton, A.: Further studies on the relationship between shoot and root systems of grasses, Journal of
+the British Grassland Society 15, 41-47, 1960.}
 ____________________________________________________________________________________________
 M. W. I. Schmidt
 michael.schmidt@geo.uzh.ch
