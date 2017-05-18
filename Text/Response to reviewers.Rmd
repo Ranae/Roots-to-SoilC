@@ -42,7 +42,7 @@ about this statement quite weak for several reasons related to logical contradic
 and some misunderstanding about the work of Cotrufo as discussed into more detail
 below. 
 
-\textcolor{blue}{We feel we can do a better job communicating our proposed mechanism and address these details below. We found your comments to be extremely helpful towards improving this manuscript and enjoyed getting a new perspective on many of the aspects we have wrestled with during writing. It seems we all have the same understanding of Cortrufo et al.'s conceptual models, but are used to thinking about these models under different environmental circumstances. One major assumption on which we do not completely agree is the likeliness of microbial by-products to be transported deeper in the soil profile. We hope the discussion below and additional references help to clarify the manuscript.}
+\textcolor{blue}{We feel we can do a better job communicating our proposed mechanism and we address these details below. We found your comments to be extremely helpful towards improving this manuscript and enjoyed getting a new perspective on many of the aspects we have wrestled with during writing. It seems we all have the same understanding of Cortrufo et al.'s conceptual models, but are used to thinking about these models under different environmental circumstances. One major assumption on which we do not completely agree is the likeliness of microbial by-products to be transported deeper in the soil profile. We hope the discussion below and additional references help to clarify the manuscript.}
 
 If I consider these two paths of SOM formation and your results together, I
 would consider that shallow root of high litter quality would supply high input of DOC
@@ -59,7 +59,7 @@ the disproportionally large stock of SOM relative to root C inputs in deep soil.
 Further,Cotrufo et al. (2015) studied SOM formation over short-term scale whereas deep soil
 C is often hundreds to thousands year-old and highly microbialy processed. 
 
-\textcolor{blue}{Yes, Cortrufo et al. has focused on short-term scales and their conceptual model is still hypotheics, however, what happens in the short-term is directly connected to what happens in the long term. The fact that deep soil C is highly microbially processed does not indicate where where the C originated.} 
+\textcolor{blue}{Yes, Cortrufo et al. has focused on short-term scales and their conceptual model is still hypothetical, however, what happens in the short-term is directly connected to what happens in the long term. The fact that deep soil C is highly microbially processed does not indicate where where the C originated.} 
 
 Fontaine et al. (2007) found that deep soil C mineralization is strongly limited by energetic
 constraints. This slow turnover together with the DOC input from surface to deep soil
@@ -74,7 +74,7 @@ prairie) could explain the vertical C profile of your studied soil though this c
 strong part of your study to the linkage between root C input and the vertical distribution
 of SOM.
 
-\textcolor{blue}{Thank you for the methodological questions. We would have liked to spend more discussion on the root systems of maize vs. prairie, but felt that without measurements of the original soil C profile, discussion specific to change created by annual cropping systems would be challenged. However, we can strengthen this component in response to your comment.}    
+\textcolor{blue}{Thank you for the methodological questions below. We would have liked to spend more discussion on the root systems of maize vs. prairie, but felt that without measurements of the original soil C profile, discussion specific to change created by annual cropping systems would be challenged. However, we can strengthen this component in response to your comment.}    
 
 Taken together, I think this manuscript will need important revisions to be acceptable
 for publication, especially by avoiding tricky extrapolation and misinterpretation and by
@@ -88,12 +88,12 @@ I well understood your design, you studied soil root allocation on restored prai
 have maize cropping historical of >100 years. Therefore, would it not be more correct to
 talk about moving from maize to prairie. 
 
-\textcolor{blue}{I am referencing the historical shift from prairie to maize. I will change the wording for clarification.}
+\textcolor{blue}{We are referencing the historical shift from prairie to maize. I will change the wording for clarification.}
 
 P.1-L. 15. 'contribute' to what? To soil C stock?
 Please clarify. Alternatively, we could also talk about 'C allocation'. 
 
-\textcolor{blue}{Yes, soil C stock. I will clarify}
+\textcolor{blue}{Yes, soil C stock. We will clarify}
 
 P.1-L. 21. Please
 clarify what you mean by 'aboveground process'. Is really soil disturbance (tillage?) an
@@ -104,16 +104,16 @@ aboveground process?
 P.1-L. 26-27. Is this definition really necessary here? I think it
 will be better placed in the Material and Methods section.
 
-\textcolor{blue}{I included it here as I go on to use the definition in the introduction.}
+\textcolor{blue}{We included it here as we go on to use the definition in the introduction.}
 
 P.2-L.5. Please insert the
 Weaver citation 
 
-\textcolor{blue}{Thanks for catching this, I will insert the citation.}
+\textcolor{blue}{Thanks for catching this, we will insert the citation.}
 
 P.2-L.17. Why did you used 'Carbon:N' though you used 'C:N' just before.
 
-\textcolor{blue}{I'm told not to start a sentence with an abbreviation.}
+\textcolor{blue}{We did not want to start a sentence with an abbreviation.}
 
 P.2-L.19-21. I do not clearly see how your experimental design give you a 'unique
 perspective on characteristics of root inputs' Please clarify. 
@@ -152,7 +152,7 @@ P.5-L.15-23. Logistic model is used fit binary response variable.
 Therefore, I do not see the rationale to use Logistic model to fit root mass, which
 is a continuous variable. . . 
 
-\textcolor{blue}{We will add more details here. Logistic regression is used to fit binary response variables. We used a logistic function to fit the data and then statistically compared the parameters of each fit of the function as described in the book "Mixed Effect Models in S and S-plus", Pinheiro and Bates, 2000.}  
+\textcolor{blue}{We will add more details here. Logistic regression is used to fit binary response variables. We used a logistic function to fit the data and then statistically compared the parameters of each fit of the function as described in the book "Mixed Effect Models in S and S-plus", Pinheiro and Bates, 2000. We will add this citation.}  
 
 P.5-L.19. It is not so clear to me what you mean by "root
 mass accumulation". It is the difference in root mass between two sampling dates? Or
@@ -169,7 +169,7 @@ addition to be more standard method, I also found it clearer as root gains are d
 obtained with the ingrowth core method while your root loss computation use root mass
 accumulation, which was not very well defined. 
 
-\textcolor{blue}{We can easily replace "root loss" with "root gain" in our equation.}
+\textcolor{blue}{We can and will easily replace "root loss" with "root gain" in our equation.}
 
 P.7-L.9. Throughout the manuscript,
 we heavily use the 'pool'. Though I found this term appropriate for distingue different
@@ -217,14 +217,14 @@ organic matter from the top of the soil profile downward' Then this is not consi
 with evidence that the contribution of microbial- and not root-derived C increases with
 depth (Rumpel and Kogel-Knabner, 2011) in contrast with what you stated L.15-16. 
 
-\textcolor{blue}{The sentence following this one in the manuscript is very important. The microbially-derived organic matter would be mobile and transported to deeper depths, contributing to the relatively immobile pool of physically-derived organic matter. This is very consistent with Rumpel and Kogel-Knaber (2011), as we evenutally conclude.} 
+\textcolor{blue}{The sentence following this one in the manuscript is very important. The microbially-derived organic matter would be mobile and transported to deeper depths, contributing to the relatively immobile pool of physically-derived organic matter. This is very consistent with Rumpel and Kogel-Knaber (2011), as we eventually conclude.} 
 
 I assume that DOC derived from soil surface can be mobile and move down the profile but a large portion can be stabilized in the surface and at least the SOM derived
 from deep root with high C:N ratio should be less microbial-derived given what you
 state. This point should be clarify. Moreover, the notion physically-derived SOM does
 not make sense, see my previous comment.
 
-\textcolor{blue}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8 percent, indicating a reduced capacity for additional C stabilization. In this environment, microbial by-products are likely to be part of the soil solution and easily transported to deeper depths. We will make this clearer in the manuscript.}      
+\textcolor{blue}{Yes, DOC can be stabilized in the soil surface, but the proportion of C stabilized depends on soil type and level of C saturation. These prairie-formed soils do not have C concentrations as high as historical levels, but total C concentrations are still at 2.8 percent, indicating a reduced capacity for additional C stabilization. In this environment, microbial by-products are likely to be part of the soil solution and easily transported to deeper depths with greater capacity for C stabilization. We will make this clearer in the manuscript.}      
 
 P.13-L.12-14. 'Soil organic matter at the soil surface would be vulnerable to transport to greater depth as dissolved organic C
 whereas physically-transferred soil organic matter at depth would be relatively immobile'.
@@ -233,13 +233,14 @@ preceded by soil microorganisms and the microbial by-products are then stabilize
 soil microagregates by mineral-binding. This mineral-stabilized SOM is thus actually
 less mobile than POM, in contrast with what you stated.
 
-\textcolor{blue}{Microbial by-products are very mobile until they are stabilized. When and where they are stabilized depends on the soil conditions. In the mechanism we propose, microbial by-products reach the deeper profile and are stabilized there. This is consistent with findings that microbial-derived SOM increases with depth.}
+\textcolor{blue}{Microbial by-products are very mobile until they are stabilized. When and where they are stabilized depends on the soil conditions. In the mechanism we propose, microbial by-products reach the deeper profile and are stabilized there. This is consistent with findings that proportion of microbial-derived SOM increases with depth.}
 
 P.13-L.16-19. Exsudates are highly labile compounds that are very quickly preceded by soil microorganisms. Once
 metabolized, they are much less mobile. Therefore, they probably represent a minor
 fraction DOC moving down the profile and that could form deep SOC.
 
 \textcolor{blue}{Thank you, we should provide clarification that exudates quickly move into microbial pools. However, the fate of the C after that again depends on the environmental capacity for microbial by-products to be stabilized.} 
+
 P.13-L.27-29 'By the sixth year of reconstructed prairie establishment, root C pool equilibrium was
 reached and prairies began making substantial annual contributions to the soil organic
 matter pool above 30 cm, although the fraction of organic matter that remained in the
@@ -258,14 +259,19 @@ This is unclear.
 
 \textcolor{blue}{Will change to 'had greater C inputs'.}
 
-References Cotrufo, M. F., Soong, J. L., Horton, A. J., Campbell, ??
+References Cotrufo, M. F., Soong, J. L., Horton, A. J., Campbell, 
 E. E., Haddix, M. L., Wall, D. H. & Parton, W. J. (2015) Formation of soil organic matter
 via biochemical and physical pathways of litter mass loss. Nature Geosci, 8, 776-779.
+
 Fontaine, S., Barot, S., Barre, P., Bdioui, N., Mary, B. & Rumpel, C. (2007) Stability
 of organic carbon in deep soil layers controlled by fresh carbon supply. Nature, 450,
-277-U10. Gill, R. A. & Jackson, R. B. (2000) Global patterns of root turnover for terrestrial
-ecosystems. New Phytologist, 147, 13-31. Rumpel, C. & Kögel-Knabner, I. (2010)
-Deep soil organic matterâA??Ta key but poorly understood component of terrestrial C ??
+277-U10. 
+
+Gill, R. A. & Jackson, R. B. (2000) Global patterns of root turnover for terrestrial
+ecosystems. New Phytologist, 147, 13-31. 
+
+Rumpel, C. & Kögel-Knabner, I. (2010)
+Deep soil organic matter a key but poorly understood component of terrestrial C 
 cycle. Plant and Soil, 338, 143-158. 
 
 ______________________________________________________________________________________________
@@ -361,9 +367,9 @@ mod<-lm(fit$mass ~ fit$day)
 ```
 
 
-\textcolor{blue}{Thank you, you bring up some other useful points here. We can certainly include more papers on the decomposition of maize roots. Our values for maize biomass taken after maize harvest are typically ~10 percent of maize root values taken at maturity. This is in line with studies that have found that maize roots decompose rapidly. However, decomposition rate is an exponential function, with rapid decomposition occurring early and a slower rate of decomposition occurring later. Several months after maize maturity we are most likely sampling during a period of slow root decomposition.}  
+\textcolor{blue}{You bring up some other useful points here, thank you. We can certainly include more papers on the decomposition of maize roots. Our values for maize biomass taken after maize harvest are typically ~10 percent of maize root values taken at maturity. This is in line with studies that have found that maize roots decompose rapidly. However, decomposition rate is an exponential function, with rapid decomposition occurring early and a slower rate of decomposition occurring later. Several months after maize maturity we are most likely sampling during a period of slower root decomposition.}  
 
-\textcolor{blue}{We also questioned the lack of accumulated root mass from years previous to our experiment. We were careful to collect maize root samples 20 cm from our maize row and to plant our rows within 2-3 cm of the previous year's row. We assumed that the cropping legacy would have left a more homogenous distribution of roots than the one we implemented.} 
+\textcolor{blue}{We also questioned the lack of accumulated root mass from years previous to our experiment. We were careful to collect maize root samples 20 cm from our maize row and to plant our rows within 2-3 cm of the previous year's row. We assumed that the cropping legacy from years past would have left a more homogenous distribution of roots than the one we implemented.} 
 
 2) The maize-root C profile is presented 3 times in the paper: 1) Fig 1 b, 2) Fig 2, and
 3) Fig. A3. The 3 figures are in the same units (Mg ha-1), but I could not reconcile
@@ -371,7 +377,7 @@ the data between them. The 2013 data of fig. 1 b (with largest root accumulation
 the top soil) do not seem to correspond to the 2013 data of figure A3, which seems to
 show highest maize-root biomass in the deeper soil. 
 
-\textcolor{blue}{You are correct in not being able to reconcile the figures in the paper (1b and 2) with the figures in the appendix (A3) because the depth increments are not the same. Figure A3 shows the actual data, mass collected at 0-5, 5-15, 15-30, 30-60, and 60-100 cm depths. The deepest depth is 40 cm, resulting in high values relative to 5-15 cm, only 10 cm. We used the values taken in these depth increments to break distribution into 5 cm increments, as described in P6, L 3-4. This gave a more accurate depiction of the distribution of both roots and organic C through the soil profile.}
+\textcolor{blue}{You are correct in not being able to reconcile the figures in the paper (1b and 2) with the figures in the appendix (A3) because the depth increments are not the same. Figure A3 shows the actual data, mass collected at 0-5, 5-15, 15-30, 30-60, and 60-100 cm depths. For example, the deepest depth increment is 40 cm long, resulting in high values relative to 5-15 cm, only 10 cm long. We used the values taken in these depth increments to break distribution into 5 cm increments, as described in P6, L 3-4. This gave a more accurate depiction of the distribution of both roots and organic C through the soil profile, shown in Figs. 1 and 2.}
 
 In addition, the maize root profile
 appears more even in Fig.2 than in Fig. 1 b, while it should be exactly the opposite (e.g.
@@ -396,7 +402,7 @@ biomass profiles to soil C profiles. While it is OK to briefly elaborate about p
 implication of a higher root C/N ratio with depth, this should not be the main part of
 the discussion, which should instead focus on actual significant results. 
 
-\textcolor{blue}{The implications for C storage presented in this paper are partly hypothetical, but are complex and novel enough to warrant extensive discussion. The mystery of the disproportionally large stock of SOM relative to root C input found in deep soil has been unsolved since first noticed over 100 years ago and root C:N ratio increase with depth is a new and useful piece of information. We do not have direct evidence to link root biomass profiles to soil C profiles, but what we do have, combined with what we are able to model, is better than anything we can find in the literature.}  
+\textcolor{blue}{The implications for C storage presented in this paper are partly hypothetical, but are complex and novel enough to warrant extensive discussion. The mystery of the disproportionally large stock of SOM relative to root C input found in deep soil has been unsolved since first noticed over 100 years ago and root C:N ratio increase with depth is a new and useful piece of information. We do not have direct evidence to link root biomass profiles to soil C profiles, but what we do have, combined with what we are able to model, is better than anything that has been previously published.}  
 
 In addition, I could not reconcile the two ideas presented here about the effect of root C/N ratio on
 C storage in soils. On the hand, the authors argue that a lower C/N ratio for maize root
@@ -405,7 +411,7 @@ hand, they also argue that an increasing C/N ratio of roots with depth in the so
 also favours C storage (e.g. p1, line 10-12). The potential attempt to reconcile these
 two contradictory effects of root C/N ratio on soil C was unconvincing (p 14).
 
-\textcolor{blue}{We will reword P1, line 10-12 - "In all treatments we found 10 that root C:N ratios increased with depth, which may help explain why an unexpectedly large proportion of soil organic C is found below 20 cm." It is meant to suggest that increaseing C:N ratios with depth play a role in an unexpectedly large proportion of soil organic C found below 20 cm, not that the increase in C:N ratio directly contributes C storage. The relationship between C:N ratios and C storage is not necessarily intuitive, as we later describe in the text.}
+\textcolor{blue}{We will reword P1, line 10-12 - "In all treatments we found that root C:N ratios increased with depth, which may help explain why an unexpectedly large proportion of soil organic C is found below 20 cm." It is meant to suggest that increaseing C:N ratios with depth play a role in an unexpectedly large proportion of soil organic C found below 20 cm, not that the increase in C:N ratio directly contributes C storage. The relationship between C:N ratios and C storage is not necessarily intuitive, as we later describe in the text.}
 
 In conclusion, Dietzel et al. have collected an impressive data set on maize and prairie
 roots following maize-soybean rotation. The dataset appears to suffer from some artefacts,
@@ -527,7 +533,7 @@ letters is missing; it could be part of the description of the table
 
 Explanation pro glimmix on page 5/14 but not in table description.
 
-\textcolor{blue}{Not sure what you are looking for here.}
+\textcolor{blue}{Thank you, but not sure what you are looking for here.}
 
 P. 13, line 3: increase in root pool C:N ratio has not been reported previously in the literature:
 We would appreciate some information about previous research which focused on a
