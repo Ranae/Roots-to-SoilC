@@ -5,6 +5,8 @@ output:
      keep_tex: true
 header-includes:
   - \usepackage{color}
+  - \usepackage{lineno}
+  - \linenumbers
 ---
 
 Anonymous Referee #1  
@@ -394,7 +396,7 @@ are presented in g m-2 in Table 4, making it difficult to compare to the root po
 presented in Mg ha-1. The maize root productivity appears low and I am missing a
 coherent evaluation of the C input in the context of published studies.
 
-\textcolor{blue}{Sorry these data are not clear, we will improve this in the paper as well as change the units to correspond with other reported units. The maize root productivity is low because samples were taken 3-4 months after maize maturity, which we will also highlight.} 
+\textcolor{blue}{Sorry these data are not clear, we will improve this in the paper as well as change the units to correspond with other reported units. The maize root productivity is low because samples were taken 2-3 months after maize maturity, which we will also highlight.} 
 
 4) The implications for C storage presented in this paper are largely hypothetical and
 somewhat contradictory. The present paper contains no significant result to link root
