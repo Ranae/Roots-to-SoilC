@@ -6,7 +6,7 @@ output:
 header-includes:
   - \usepackage{color}
   - \usepackage{lineno}
-  - \linenumbers
+    - \linenumbers
 ---
 
 Anonymous Referee #1  
