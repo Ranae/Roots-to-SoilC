@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 
 
-roots<-read.table("Data/rootplotmeans.txt", header = TRUE)
+roots<-read.table("../Data/rootplotmeans.txt", header = TRUE)
 roots$plot<-as.factor(plot)
 roots<-roots[roots$trt %in% c("P", "PF"),]
 
