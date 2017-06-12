@@ -1,0 +1,21 @@
+---
+title: "Revision To Do"
+author: "Ranae Dietzel"
+date: "June 12, 2017"
+output: pdf_document
+---
+[ ] Check for conclusions that are too strong
+[ ] Link short-term and long-term processes
+[ ] What makes up DOC?
+[ ] Mention Fontain (2007) energy restraints
+[ ] Discuss different root systems and vertical distribution a little more
+[ ] Clarify scientific questions/hypotheses
+[ ] Especially the second question
+[3] Include total soil N data
+[ ] Fixed vs. random effects in my models
+[1] Change root loss and root gain in the equation  
+[4] Reference Table 1
+[2] Move table 3 to appendix
+[ ] Correct dates in methods section
+[ ] Clearly present root regrowth data
+[ ] All other details in response
