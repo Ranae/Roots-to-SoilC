@@ -50,16 +50,9 @@ P11 <- 386.6
 PF11 <- 168.3
 
 
-turn<-c(367.0, 146.3, 386.6, 168.3, 55.8, 47.9)  #Inputs from Crop Science
+turn<-c(367.0, 146.3, 386.6, 168.3, 55.8, 47.9)  #Inputs from Crop Science (w.max)
 turn<-as.data.frame(turn)
 colnames(turn)<-"input"
-turn$trt<-c("P10" ,"PF10", "P11", "PF11", "C10", "C11")
-turn$gain<-c(104.04, 62.0, 77.75, 55.12, 17.89, 16.43)  #Gains are net from from curve fits, one year minus the last
-#turn$gain<-c(237.3, -47.8, 9.2, 161.1, 2.0, 3.0)
-#turn$gain<-c(237, 9.1, -96, 111, 2, 3) #Measured differences between years?
-turn$loss<-turn$input-turn$gain
-turn$pool<-c(748.4, 230.6, 757.6, 342.1, 44.1, 47.2)
-#turn$k<-turn$gain/turn$pool
 turn$k<-turn$input/turn$pool
 turn$mrt<-1/turn$k
 
