@@ -11,11 +11,18 @@ output: pdf_document
 [ ] Discuss different root systems and vertical distribution a little more
 [ ] Clarify scientific questions/hypotheses
 [ ] Especially the second question
-[3] Include total soil N data
+[X] Include total soil N data
 [ ] Fixed vs. random effects in my models
-[1] Change root loss and root gain in the equation  
+[X] Change root loss and root gain in the equation  
 [4] Reference Table 1
-[2] Move table 3 to appendix
+[X] Move table 3 to appendix
 [ ] Correct dates in methods section
-[ ] Clearly present root regrowth data
-[ ] All other details in response
+[X] Clearly present root regrowth data
+[X] All other details in response
+[ ] Check figure/table numbers
+[ ] Improve figure linetypes and legends
+[ ] Replace a,b,c in root/soil C figure
+[ ] Add Weaver in bib.tex
+[ ] Check input vs. gain language
+[ ] Change appendix to g/m2
+[ ] 
