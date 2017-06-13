@@ -5,7 +5,9 @@ library(ggplot2)
 
 roots<-read.table("../Data/rootplotmeans.txt", header = TRUE)
 roots$plot<-as.factor(plot)
-roots<-roots[roots$trt %in% c("P", "PF", "CC"),]
+roots<-roots[roots$trt %in% c("P", "PF", "CC"),]  
+
+ggplot(roots, a)
 
 ggplot(roots, aes(x=year, y=mass, color=trt, group=trt))+
   geom_point()+
@@ -22,10 +24,14 @@ top<-roots%>%
 
 dif<-roots%>%
   filter(depth < 60)%>%
+  filter(plot != 41)%>%
   select(year, trt, plot, mass)%>%
   group_by(year, trt, plot)%>%
   summarize(total = sum(mass))%>%
-  spread(key = year, value = total)
+  spread(key = year, value = total)%>%
+  mutate(dif2010 = `2010`-`2009`, dif2011 = `2011`-`2010`)%>%
+  group_by(trt)%>%
+  summarize_each(funs(mean(.)))
   
   
 
@@ -49,10 +55,12 @@ turn<-as.data.frame(turn)
 colnames(turn)<-"input"
 turn$trt<-c("P10" ,"PF10", "P11", "PF11", "C10", "C11")
 turn$gain<-c(104.04, 62.0, 77.75, 55.12, 17.89, 16.43)  #Gains are net from from curve fits, one year minus the last
+#turn$gain<-c(237.3, -47.8, 9.2, 161.1, 2.0, 3.0)
 #turn$gain<-c(237, 9.1, -96, 111, 2, 3) #Measured differences between years?
 turn$loss<-turn$input-turn$gain
 turn$pool<-c(748.4, 230.6, 757.6, 342.1, 44.1, 47.2)
-turn$k<-turn$gain/turn$pool
+#turn$k<-turn$gain/turn$pool
+turn$k<-turn$input/turn$pool
 turn$mrt<-1/turn$k
 
 turn2<-turn%>%
