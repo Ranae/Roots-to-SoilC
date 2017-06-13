@@ -5,7 +5,7 @@ library(ggplot2)
 
 roots<-read.table("../Data/rootplotmeans.txt", header = TRUE)
 roots$plot<-as.factor(plot)
-roots<-roots[roots$trt %in% c("P", "PF"),]
+roots<-roots[roots$trt %in% c("P", "PF", "CC"),]
 
 ggplot(roots, aes(x=year, y=mass, color=trt, group=trt))+
   geom_point()+
@@ -19,6 +19,15 @@ top<-roots%>%
   summarize(total = sum(mean))%>%
   filter(year %in% c(2009, 2010, 2011))%>%
   print()
+
+dif<-roots%>%
+  filter(depth < 60)%>%
+  select(year, trt, plot, mass)%>%
+  group_by(year, trt, plot)%>%
+  summarize(total = sum(mass))%>%
+  spread(key = year, value = total)
+  
+  
 
 ###k=input/pool
 #input from 2015 Crop Science publication, pool from 0-30 cm mass calculated above
