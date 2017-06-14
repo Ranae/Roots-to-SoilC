@@ -4,24 +4,24 @@ author: "Ranae Dietzel"
 date: "June 12, 2017"
 output: pdf_document
 ---
-[ ] Check for conclusions that are too strong
+[X] Check for conclusions that are too strong
 [ ] Link short-term and long-term processes
-[ ] What makes up DOC?
-[ ] Mention Fontaine (2007) energy restraints
-[ ] Discuss different root systems and vertical distribution a little more
-[ ] Clarify scientific questions/hypotheses
-[ ] Especially the second question
+[?] What makes up DOC?
+[X] Mention Fontaine (2007) energy restraints
+[X] Discuss different root systems and vertical distribution a little more
+[X] Clarify scientific questions/hypotheses
+[X] Especially the second question
 [X] Include total soil N data
 [ ] Fixed vs. random effects in my models
 [X] Change root loss and root gain in the equation  
-[4] Reference Table 1
+[X] Reference Table 1
 [X] Move table 3 to appendix
-[ ] Correct dates in methods section
+[X] Correct dates in methods section
 [X] Clearly present root regrowth data
 [X] All other details in response
 [ ] Check figure/table numbers
 [ ] Improve figure linetypes and legends
 [X] Replace a,b,c in root/soil C figure
-[ ] Add Weaver in bib.tex
-[ ] Check input vs. gain language
+[X] Add Weaver in bib.tex
+[X] Check input vs. gain language
 [X] Change appendix to g/m2
