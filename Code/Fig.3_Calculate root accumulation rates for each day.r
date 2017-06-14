@@ -16,8 +16,9 @@ theme_set(this_theme)
 
 vgPalette <- c("#EBD46C", "#CA7636", "#8F3928", "#63602D", "#3A2814")
 otPalette <- c("#fff275", "#ff8c42", "#ff3c38", "#a23e48", "#3b5166")
+mylines<- c("solid", "dashed", "dotted", "dotdash", "longdash")
 
-coeff<-read.csv("Data/Logistic parameters of root accumulationv2.csv", header=TRUE)
+coeff<-read.csv("../Data/Logistic parameters of root accumulationv2.csv", header=TRUE)
 
 log.rate<-function(t, Asym, xmid, scal){
   
@@ -350,7 +351,7 @@ a100<-ggplot(data = filter(massmeans2, depth == 100),aes(x = day,y = Mg.ha.day))
 
 
 ###This one is in the publication, Figure 3
-pdf(file = "Figures/Root accumulation by mass.pdf", height = 8, width = 10, family = "Times")
+pdf(file = "../Figures/Root accumulation by mass.pdf", height = 8, width = 10, family = "Times")
 ggplot(data = filter(massmeans3),aes(x = day,y = Mg.ha.day)) + 
   geom_ribbon(aes(group = depth,ymin = Mg.ha.day - Mg.ha.day.se,ymax = Mg.ha.day + Mg.ha.day.se),alpha = 0.25) + 
   geom_line(aes(group = depth,colour = depth, linetype=depth),size = 1.3) + 
@@ -358,7 +359,10 @@ ggplot(data = filter(massmeans3),aes(x = day,y = Mg.ha.day)) +
   labs(x = "Year",y = (expression(paste("Root pool mass (Mg ha" ^ "-1",")")))) + 
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013")) +
   ylim(0,4.2) + 
-  scale_colour_manual(values = otPalette)+
+  scale_colour_manual(values = otPalette, breaks = c("5", "15", "30", "60", "100"), 
+                                          labels = c("0-5 cm", "5-15 cm", "15-30 cm", "30-60 cm", "60-100 cm"))+
+  scale_linetype_manual(values = mylines, breaks = c("5", "15", "30", "60", "100"), 
+                      labels = c("0-5 cm", "5-15 cm", "15-30 cm", "30-60 cm", "60-100 cm"))+
   theme(#panel.grid.major = element_blank(),
         #panel.grid.minor = element_blank(),
         panel.background = element_blank(),
@@ -371,7 +375,7 @@ ggplot(data = filter(massmeans3),aes(x = day,y = Mg.ha.day)) +
         axis.text.y = element_text(colour="black", size=18))
 dev.off()
 
-
+scale_fill_manual(values = desert, breaks=c("CC", "PF", "P"), labels=c("Maize", "Fertilized Prairie", "Prairie"))+
 vplayout<- function(x,y)
   viewport(layout.pos.row=x, layout.pos.col=y)
 

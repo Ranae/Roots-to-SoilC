@@ -17,8 +17,9 @@ theme_set(this_theme)
 
 vgPalette <- c("#EBD46C", "#CA7636", "#8F3928", "#63602D", "#3A2814")
 otPalette <- c("#fff275", "#ff8c42", "#ff3c38", "#a23e48", "#3b5166")
+mylines<- c("solid", "dashed", "dotted", "dotdash", "longdash")
 
-coeff<-read.csv("Data/Logistic parameters of root accumulationv2.csv", header=TRUE)
+coeff<-read.csv("../Data/Logistic parameters of root accumulationv2.csv", header=TRUE)
 
 log.rate<-function(t, Asym, xmid, scal){
   
@@ -92,7 +93,10 @@ ratescc<-ggplot(data = filter(ratemeans2, trt=="CC"),aes(x = day,y = g.m2.day)) 
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
   scale_y_continuous(breaks=c(0.00, 0.02, 0.04))+
   #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
-  scale_colour_manual(values = otPalette)+
+  scale_colour_manual(values = otPalette, breaks = c("5", "15", "30", "60", "100"), 
+                      labels = c("0-5 cm", "5-15 cm", "15-30 cm", "30-60 cm", "60-100 cm"))+
+  scale_linetype_manual(values = mylines, breaks = c("5", "15", "30", "60", "100"), 
+                        labels = c("0-5 cm", "5-15 cm", "15-30 cm", "30-60 cm", "60-100 cm"))+
   annotate("text", x=200, y=0.045, label="a", size=12)+
   theme(axis.line = element_line(),
         plot.margin = unit(c(.3,.5,1,.2), "cm"),
@@ -109,7 +113,10 @@ ratespf<-ggplot(data = filter(ratemeans2, trt=="PF"),aes(x = day,y = g.m2.day)) 
   labs(x = "Days after establishment",y = (expression(paste("Accumulation Rate (g m" ^ "-2","day" ^ "-1",")")))) + 
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
   #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
-  scale_colour_manual(values = otPalette)+
+  scale_colour_manual(values = otPalette, breaks = c("5", "15", "30", "60", "100"), 
+                      labels = c("0-5 cm", "5-15 cm", "15-30 cm", "30-60 cm", "60-100 cm"))+
+  scale_linetype_manual(values = mylines, breaks = c("5", "15", "30", "60", "100"), 
+                        labels = c("0-5 cm", "5-15 cm", "15-30 cm", "30-60 cm", "60-100 cm"))+
   annotate("text", x=1750, y=0.5, label="b", size=12)+
   theme(axis.line = element_line(),
         plot.margin = unit(c(0,.5,1,.6), "cm"),
@@ -127,7 +134,10 @@ ratesp<-ggplot(data = filter(ratemeans2, trt=="P"),aes(x = day,y = g.m2.day)) +
   scale_x_discrete(breaks=c(153,520,882,1248,1619,1978), labels = c("2008", "2009", "2010", "2011", "2012", "2013"))+
   scale_y_continuous(breaks=c(0.00, 0.4, 0.8))+
   #scale_x_discrete(breaks=c(100,400,700,1000,1300,1600,1900))+
-  scale_colour_manual(values = otPalette)+
+  scale_colour_manual(values = otPalette, breaks = c("5", "15", "30", "60", "100"), 
+                      labels = c("0-5 cm", "5-15 cm", "15-30 cm", "30-60 cm", "60-100 cm"))+
+  scale_linetype_manual(values = mylines, breaks = c("5", "15", "30", "60", "100"), 
+                        labels = c("0-5 cm", "5-15 cm", "15-30 cm", "30-60 cm", "60-100 cm"))+
   annotate("text", x=1750, y=0.9, label="c", size=12)+
   theme(axis.line = element_line(),
         plot.margin = unit(c(0,.5,0,.6), "cm"),
@@ -144,7 +154,7 @@ library(grid)
 vplayout<- function(x,y)
   viewport(layout.pos.row=x, layout.pos.col=y)
 
-pdf("Figures/Root Accumulation and Ratesv7, three panels.pdf", width = 10, height = 15, family = "Times")
+pdf("../Figures/Root Accumulation and Ratesv7, three panels.pdf", width = 10, height = 15, family = "Times")
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(4,2, heights = unit(c(5,5,5,.39), "null"), widths = unit(c(.38,5), "null"))))
 #grid.text((expression(paste("Biomass (Mg ha" ^ "-1",")"))), rot = 90, vp = viewport(layout.pos.row = 1:5, layout.pos.col = 1), gp=gpar(fontsize=18))
