@@ -7,7 +7,7 @@ output: pdf_document
 [ ] Check for conclusions that are too strong
 [ ] Link short-term and long-term processes
 [ ] What makes up DOC?
-[ ] Mention Fontain (2007) energy restraints
+[ ] Mention Fontaine (2007) energy restraints
 [ ] Discuss different root systems and vertical distribution a little more
 [ ] Clarify scientific questions/hypotheses
 [ ] Especially the second question
@@ -21,8 +21,7 @@ output: pdf_document
 [X] All other details in response
 [ ] Check figure/table numbers
 [ ] Improve figure linetypes and legends
-[ ] Replace a,b,c in root/soil C figure
+[X] Replace a,b,c in root/soil C figure
 [ ] Add Weaver in bib.tex
 [ ] Check input vs. gain language
-[ ] Change appendix to g/m2
-[ ] 
+[X] Change appendix to g/m2
