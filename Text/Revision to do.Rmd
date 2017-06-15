@@ -5,22 +5,22 @@ date: "June 12, 2017"
 output: pdf_document
 ---
 [X] Check for conclusions that are too strong
-[ ] Link short-term and long-term processes
+[?] Link short-term and long-term processes
 [?] What makes up DOC?
 [X] Mention Fontaine (2007) energy restraints
 [X] Discuss different root systems and vertical distribution a little more
 [X] Clarify scientific questions/hypotheses
 [X] Especially the second question
 [X] Include total soil N data
-[ ] Fixed vs. random effects in my models
+[X] Fixed vs. random effects in my models
 [X] Change root loss and root gain in the equation  
 [X] Reference Table 1
 [X] Move table 3 to appendix
 [X] Correct dates in methods section
 [X] Clearly present root regrowth data
 [X] All other details in response
-[ ] Check figure/table numbers
-[ ] Improve figure linetypes and legends
+[X] Check figure/table numbers
+[X] Improve figure linetypes and legends
 [X] Replace a,b,c in root/soil C figure
 [X] Add Weaver in bib.tex
 [X] Check input vs. gain language
