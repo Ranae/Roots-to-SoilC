@@ -1,27 +1,23 @@
 ---
-title: "Revision To Do"
-author: "Ranae Dietzel"
-date: "June 12, 2017"
+title: "Minor Revisions List"
 output: pdf_document
 ---
-[X] Check for conclusions that are too strong
-[?] Link short-term and long-term processes
-[?] What makes up DOC?
-[X] Mention Fontaine (2007) energy restraints
-[X] Discuss different root systems and vertical distribution a little more
-[X] Clarify scientific questions/hypotheses
-[X] Especially the second question
-[X] Include total soil N data
-[X] Fixed vs. random effects in my models
-[X] Change root loss and root gain in the equation  
-[X] Reference Table 1
-[X] Move table 3 to appendix
-[X] Correct dates in methods section
-[X] Clearly present root regrowth data
-[X] All other details in response
-[X] Check figure/table numbers
-[X] Improve figure linetypes and legends
-[X] Replace a,b,c in root/soil C figure
-[X] Add Weaver in bib.tex
-[X] Check input vs. gain language
-[X] Change appendix to g/m2
+[X] Check for hypothetical conclusions that are too strong  
+[X] Strengthen empirical links between roots & soil C where possible   
+[X] Mention Fontaine (2007) energy restraints  
+[X] Discuss different root systems and vertical distribution more   
+[X] Clarify scientific questions/hypotheses  
+  [X] Especially the second question  
+[X] Include total soil N data   
+[X] Fixed vs. random effects in my stat models  
+[X] Change root loss and root gain in the equation    
+[X] Reference Table 1  
+[X] Move table 3 to appendix  
+[X] Correct dates in methods section  
+[X] Clearly present root regrowth data  
+[X] Check figure/table numbers  
+[X] Improve figure linetypes and legends  
+[X] Add Weaver, Castellano, Fontain in references  
+[X] Check input vs. gain language  
+[X] Change table to Mg/ha  
+[X] All other details included in response  
